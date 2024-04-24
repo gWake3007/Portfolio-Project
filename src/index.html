@@ -2,23 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Portfolio-Project</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load ="partials/header.html" />
-
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
-
-    <script type="module" src="./main.js"></script>
+    <!-- Header + Mobile-menu - (Артём Радченко) -->
+    <load src="./partials/header.html" />
+    <load src="./partials/mobile-menu.html" />
+    <main>
+      <!-- Hero - (Сергей Решетняк) -->
+      <load src="./partials/hero.html" />
+      <!-- About - (Дима Корниенко) -->
+      <load src="./partials/about.html" />
+      <!-- Benefits - (Дима Черкасько) -->
+      <load src="./partials/benefits.html" />
+      <!-- Projects - (Женя рычков) -->
+      <load src="./partials/projects.html" />
+      <!-- FAQ - (Женя Корнивицкий) -->
+      <load src="./partials/faq.html" />
+      <!-- Covers - (Татьяна Гогуля) -->
+      <load src="./partials/covers.html" />
+      <!-- Reviews - (Леня Яж) -->
+      <load src="./partials/reviews.html" />
+      <!-- Work together + modal - (Вика Тычицкая) -->
+      <load src="./partials/work-together.html" />
+      <load src="./partials/modal.html" />
+    </main>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
