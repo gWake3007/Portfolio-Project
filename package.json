@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "vite build --base=/Portfolio-Project/",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -21,5 +21,7 @@
     "swiper": "^11.1.1",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
-  }
+  },
+  "description": "Этот проект был создан при помощи Vite. Для знакомства и настройки\r дополнительных возможностей [обратись к документации](https://vitejs.dev/).",
+  "main": "vite.config.js"
 }
