@@ -4,25 +4,25 @@
   | default @import url()
   |============================
 */
-@import url('reset.css');
-@import url('base.css');
+@import url('./reset.css');
+@import url('./base.css');
 /* Header + Mobile-menu - (Артём Радченко) */
-@import url('header.css');
-@import url('mobile-menu.css');
+@import url('./header.css');
+@import url('./mobile-menu.css');
 /* Hero - (Сергей Решетняк) */
-@import url('hero.css');
+@import url('./hero.css');
 /* About - (Дима Корниенко) */
-@import url('about.css');
+@import url('./about.css');
 /* Benefits - (Дима Черкасько) */
-@import url('benefits.css');
+@import url('./benefits.css');
 /* Projects - (Женя рычкова) */
-@import url('projects.css');
+@import url('./projects.css');
 /* FAQ - (Женя Корнивицкий) */
-@import url('faq.css');
+@import url('./faq.css');
 /* Covers - (Татьяна Гогуля) */
-@import url('covers.css');
+@import url('./covers.css');
 /* Reviews - (Леня Яж) */
-@import url('reviews.css');
+@import url('./reviews.css');
 /* Work together + modal - (Вика Тычицкая) */
-@import url('work-together.css');
-@import url('modal.css');
+@import url('./work-together.css');
+@import url('./modal.css');
