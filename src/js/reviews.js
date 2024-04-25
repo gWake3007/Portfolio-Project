@@ -1,5 +1,5 @@
-import axios from 'axios';
-const axios = require('axios').default;
+// import axios from 'axios';
+// const axios = require('axios').default;
 
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
