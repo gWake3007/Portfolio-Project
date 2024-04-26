@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.content {
+  position: relative;
+  width: 1440px;
+  height: 960px;
+}
+.marquee {
+  position: absolute;
+  right: -800px;
+  left: 0;
+  overflow: hidden;
+  font-family: 'Pridi', sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+.marquee__inner {
+  display: flex;
+  height: 100%;
+  transform: rotate(16deg);
+}
+
+.marquee__line {
+  background-color: #ffdc00;
+  flex-shrink: 0;
+  margin-right: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: calc(100% / 8); */
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-180%);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  width: 544px;
+  height: 314px;
+}
