@@ -4,19 +4,24 @@
   box-sizing: border-box;
 }
 .content {
-  position: relative;
-  width: 1440px;
-  height: 960px;
+  /* position: relative; */
+  width: 375px;
+  height: 508px;
+}
+
+.container-covers {
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 320px;
 }
 .marquee {
-  position: absolute;
+  /* position: absolute;
   right: -800px;
-  left: 0;
+  left: 0; */
   overflow: hidden;
-  font-family: 'Pridi', sans-serif;
-  font-weight: 600;
-  font-size: 34px;
-  text-transform: uppercase;
 }
 
 .marquee__inner {
@@ -26,14 +31,13 @@
 }
 
 .marquee__line {
-  background-color: #ffdc00;
   flex-shrink: 0;
   margin-right: 20px;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: calc(100% / 8); */
+  /* width: calc(100% / 4); */
   white-space: nowrap;
   animation-name: marqueeLine;
   animation-duration: 10s;
@@ -43,11 +47,11 @@
 
 @keyframes marqueeLine {
   from {
-    transform: translateX(-20%);
+    transform: translateX(0%);
   }
 
   to {
-    transform: translateX(-180%);
+    transform: translateX(-404.6%);
   }
 }
 
@@ -55,7 +59,7 @@
   display: none;
 }
 
-img {
-  width: 544px;
-  height: 314px;
-}
+/* img {
+  width: 375px;
+  height: 508px;
+} */
