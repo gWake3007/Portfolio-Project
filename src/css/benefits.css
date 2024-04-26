@@ -28,6 +28,17 @@
   }
 }
 
+.services-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 64px;
+  border-radius: 10px;
+  background: rgb(237, 59, 68);
+}
+
 .benefits-item {
   width: 344px;
   border-radius: 20px;
