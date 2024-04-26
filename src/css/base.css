@@ -20,6 +20,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 0 16px;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 320px
   }
   
   /*=========  TABLET  =========*/
