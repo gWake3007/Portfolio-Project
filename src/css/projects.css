@@ -11,7 +11,7 @@ background: #fafafa;
  padding: 32px;
 }
 
-h3 {
+.projects-title {
 font-family: "Inter Tight", sans-serif;
 font-weight: 600;
 font-size: 16px;
@@ -102,17 +102,18 @@ border-bottom-right-radius: 24px;
     justify-content: center;
     align-content: center;
     transition: 0.5s;
+    fill: #fafafa;
 }
 
 .projects-button:hover,
 .projects-button:focus {
-    
     border: 1px solid rgba(250, 250, 250, 0.5);
 }
 
 
-.projects-button:hover .button-arrow {
-    fill: #fafafa;
+.projects-button:hover .button-arrow
+ .projects-button:focus .button-arrow {
+    fill: #ffffff;
 }
 
 
