@@ -22,10 +22,11 @@ background: #242527;
 
 .about-header {
     font-weight: 500;
-  line-height: 1.16667;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: #fafafa;
+    font-size: 24px;
+    line-height: 1.16667;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+    color: #fafafa;
 }
 
 .title-span-red{
@@ -50,6 +51,12 @@ font-weight: 500;
 letter-spacing: -0.02em;
 color: #fafafa;
 margin-block-end: 32px;
+}
+
+.about-me-par-box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .accordion-list {
@@ -132,6 +139,12 @@ color: #fafafa;
 
 /* Breaking Point 768px */
 @media screen and (min-width: 768px) {
+
+  .main-box,  
+  .about-box  {
+    margin-block-end: 64px;
+  } 
+
   .main-image{
     width: 704px;
     height: 700px;
@@ -146,12 +159,32 @@ padding: 64px 64px 0px 64px;
   .about-header {
     font-size: 38px;
     line-height: 1.05263;
-    max-height: 200px;
   }
+
+  .tech-list li {
+    width: 200px;
+    height: 200px;
+  }
+
+  .tech-list li p {
+    font-size: 20px;
+      }
 }
+
+
 
 /* Breaking Point 1440px */
 @media screen and (min-width: 1440px) {
+    .header-box {
+        max-width: 680px;
+    }
+    
+    .main-box,  
+    .about-box  {
+      margin-block-end: 96px;
+    } 
+
+
     .main-image {
         width: 680px;
         height: 700px;
