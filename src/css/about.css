@@ -1,8 +1,7 @@
 /* MOBILE */
 
 .about-section {
-  padding-block-start: 32px;
-  padding-block-end: 32px;
+  padding-block-end: 64px;
 }
 
 .main-box {
@@ -83,8 +82,7 @@ margin-block-end: 32px;
     justify-content: space-between;
 }
 
-.circle {
-    display: flex;
+.circle-box {
     position: relative;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 50%;
@@ -139,6 +137,10 @@ color: #fafafa;
 
 /* Breaking Point 768px */
 @media screen and (min-width: 768px) {
+    .about-section {
+        padding-block-end: 96px;
+      }
+
 
   .main-box,  
   .about-box  {
@@ -175,6 +177,11 @@ padding: 64px 64px 0px 64px;
 
 /* Breaking Point 1440px */
 @media screen and (min-width: 1440px) {
+
+    .about-section {
+        padding-block-end: 164px;
+      }
+
     .header-box {
         max-width: 680px;
     }
