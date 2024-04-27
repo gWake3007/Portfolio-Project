@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 .content {
-  /* position: relative; */
   width: 375px;
   height: 508px;
 }
@@ -18,9 +17,6 @@
   min-width: 320px;
 }
 .marquee {
-  /* position: absolute;
-  right: -800px;
-  left: 0; */
   overflow: hidden;
 }
 
@@ -37,29 +33,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: calc(100% / 4); */
   white-space: nowrap;
   animation-name: marqueeLine;
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  width: 60%;
 }
 
 @keyframes marqueeLine {
   from {
-    transform: translateX(0%);
+    transform: translateX(170%);
   }
 
   to {
-    transform: translateX(-404.6%);
+    transform: translateX(-560%);
   }
 }
 
 .hidden {
   display: none;
 }
-
-/* img {
-  width: 375px;
-  height: 508px;
-} */
