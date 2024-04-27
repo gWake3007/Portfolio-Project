@@ -1,5 +1,3 @@
-let body = document.body;
-
 // Card move
 document.addEventListener('DOMContentLoaded', function () {
   const observer = new IntersectionObserver(entries => {
