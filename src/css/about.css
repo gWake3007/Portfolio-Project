@@ -1,13 +1,15 @@
 /* MOBILE */
 
 .about-section {
-  padding-block-start: 64px;
+  padding-block-start: 32px;
+  padding-block-end: 32px;
 }
 
 .main-box {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-block-end: 32px;
 }
 
 .header-box{
@@ -43,11 +45,108 @@ color: rgba(250, 250, 250, 0.4);
   height: 500px;
 }
 
+.about-box {
+font-weight: 500;
+letter-spacing: -0.02em;
+color: #fafafa;
+margin-block-end: 32px;
+}
+
+.accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(250, 250, 250, 0.2);
+}
+
+
+.about-box-titles {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.4);
+}
+
+.accordion-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.circle {
+    display: flex;
+    position: relative;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 50%;
+    padding: 7px;
+    width: 34px;
+    height: 34px;
+    margin-left: 44px;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .tech-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .tech-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tech-list li {
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    display: flex;
+        justify-content: center; 
+        align-items: center;
+  }
+
+  .tech-list li p {
+color: #fafafa;
+  }
+
+  .red-backgr {
+    border: none;
+    background-color: #ED3B44;
+  }
+
+  .arrow-box {
+    width: 28px;
+    height: 28px;
+  }
+
+  .arrow-right-icon {
+    rotate: 180deg;
+    margin-inline-start: 55px;
+  }
+  
+
 /* Breaking Point 768px */
 @media screen and (min-width: 768px) {
   .main-image{
     width: 704px;
     height: 700px;
+  }
+
+  .header-box {
+width: 704px;
+height: 700px;
+padding: 64px 64px 0px 64px;
+  }
+
+  .about-header {
+    font-size: 38px;
+    line-height: 1.05263;
+    max-height: 200px;
   }
 }
 
