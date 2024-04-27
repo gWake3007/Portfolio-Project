@@ -1,11 +1,7 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 .content {
   width: 375px;
   height: 508px;
+  background-image: url(../img/covers/png/covers_png_1x.png);
 }
 
 .container-covers {
@@ -15,6 +11,7 @@
   margin: 0 auto;
   width: 100%;
   min-width: 320px;
+  padding-bottom: 64px;
 }
 .marquee {
   overflow: hidden;
@@ -35,22 +32,73 @@
   justify-content: center;
   white-space: nowrap;
   animation-name: marqueeLine;
-  animation-duration: 10s;
+  animation-duration: 20s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  width: 60%;
+}
+
+.img-card {
+  width: 282px;
+  height: 163px;
+  object-fit: cover;
 }
 
 @keyframes marqueeLine {
   from {
-    transform: translateX(170%);
+    transform: translateX(175%);
   }
 
   to {
-    transform: translateX(-560%);
+    transform: translateX(-640%);
   }
 }
 
 .hidden {
   display: none;
+}
+
+/*=========  TABLET  =========*/
+@media screen and (min-width: 768px) {
+  .container-covers {
+    max-width: 768px;
+    padding-bottom: 96px;
+  }
+  .content {
+    width: 768px;
+    height: 960px;
+  }
+  .img-card {
+    width: 544px;
+    height: 314px;
+  }
+  @keyframes marqueeLine {
+    from {
+      transform: translateX(175%);
+    }
+
+    to {
+      transform: translateX(-640%);
+    }
+  }
+}
+
+/*=========  DESKTOP  =========*/
+@media screen and (min-width: 1440px) {
+  .container-covers {
+    max-width: 1440px;
+    padding-bottom: 164px;
+  }
+  .content {
+    width: 1440px;
+    height: 960px;
+  }
+  @keyframes marqueeLine {
+    from {
+      transform: translateX(275%);
+    }
+
+    to {
+      transform: translateX(-640%);
+    }
+  }
 }
