@@ -5,9 +5,10 @@
         background-position: right top;
 }
 
+
 @media (min-resolution: 192dpi),
 (min-resolution: 2dppx) { }
-.container {
+.container-work-together {
     padding: 0 16px;
         min-width: 320px;
         max-width: 375px;
