@@ -4,5 +4,5 @@ import{A as f,S as v,N as p,K as h,M as w,a,P as g}from"./assets/vendor-6c87192c
             <h4 class="reviews-name">${t}</h4>
             <p class="reviews-text">${i}</p>
         </li>
-      </div >`).join("")}const T=document.getElementById("form");a.defaults.baseURL="https://portfolio-js.b.goit.study/api";async function B(e,t){return await a.post("/requests",{email:e,comment:t})}T.addEventListener("submit",N);function N(e){e.preventDefault();const t=e.target,{userEmail:n,userComments:i}=t.elements;B(n.value,i.value).then(s=>{console.log(s)}).catch(s=>console.log(s))}
+      </div >`).join("")}const T=document.getElementById("form");a.defaults.baseURL="https://portfolio-js.b.goit.study/api";async function B(e,t){return await a.post("/requests",{email:e,comment:t})}T.addEventListener("submit",N);function N(e){e.preventDefault();const t=e.target,{userEmail:n,userComments:i}=t.elements;B(n.value,i.value).then(s=>{console.log(s)}).catch(s=>{console.log(s)})}
 //# sourceMappingURL=commonHelpers.js.map
