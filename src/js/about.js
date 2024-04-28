@@ -20,3 +20,26 @@ document.addEventListener('DOMContentLoaded', function() {
     firstAccordionItem.classList.add('is-active');
     firstAccordionContent.style.height = 'auto';
 });
+
+const swiper = new Swiper('.swiper', {
+    // Default parameters
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next', // Кнопка для переходу до наступного слайда
+      },
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween:0
+      },
+      // when window width is >= 1440px
+      1440: {
+        slidesPerView: 'auto',
+        spaceBetween: 0
+      }
+    }
+  });
