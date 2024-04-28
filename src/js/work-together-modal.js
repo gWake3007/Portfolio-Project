@@ -1,7 +1,7 @@
 import axios from 'axios';
 // const axios = require('axios').default;
 
-// import * as basicLightbox from 'basiclightbox';
+import * as basicLightbox from 'basiclightbox';
 
 // document.getElementsById("footer").addEventListener("submit", async function (event) {
 //   event.preventDefault();
