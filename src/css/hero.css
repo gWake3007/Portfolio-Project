@@ -1,12 +1,12 @@
 .hero {
   padding-top: 281px;
-  background-image: url(../img/hero/hero_mobile_1x.png);
+  background-image: image-set(
+    url(../img/hero/hero_mobile_1x.png) 1x,
+    url(../img/hero/hero_mobile_2x.png) 2x
+  );
   background-position: left;
   background-repeat: no-repeat;
-}
-
-.hero-section {
-  background-size: cover;
+  background-size: contain;
 }
 
 .hero-title {
@@ -15,7 +15,7 @@
   font-weight: 500;
   font-size: 50px;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.06em;
   margin-bottom: 212px;
 }
 
@@ -65,7 +65,10 @@
 @media screen and (min-width: 768px) {
   .hero {
     padding-top: 300px;
-    background-image: url(../img/hero/hero_tablet_1x.png);
+    background-image: image-set(
+      url(../img/hero/hero_tablet_1x.png) 1x,
+      url(../img/hero/hero_tablet_2x.png) 2x
+    );
   }
   .hero-title {
     font-size: 90px;
@@ -101,10 +104,13 @@
 
 @media screen and (min-width: 1440px) {
   .hero {
-    background-image: url(../img/hero/hero_desctop_1x.png);
+    background-image: image-set(
+      url(../img/hero/hero_desctop_1x.png) 1x,
+      url(../img/hero/hero_desctop_2x.png) 2x
+    );
   }
   .hero-title {
-    max-width: 1084px;
+    max-width: 1200px;
   }
   .hero-container-title {
     display: flex;
