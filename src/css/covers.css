@@ -25,7 +25,10 @@
 .content {
   position: relative;
   height: 508px;
-  background-image: url(../img/covers/png/covers_png_1x.png);
+  background-image: image-set(
+    url(../img/covers/png/covers_png_1x.png) 1x,
+    url(../img/covers/png/covers_png_2x.png) 2x
+  );
   overflow: hidden;
 }
 .marquee {
