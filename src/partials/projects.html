@@ -3,10 +3,14 @@
 
         <h3 class="projects-title">PROJECTS</h3>
 
-                        <!-- ================ Card 1 ======================= -->
+    <ul class="proj-swiper-wrapper">
 
-        <div class="slider-wrap">
-            <div class="text-block">
+       
+                        <!-- ================ Card 1 ======================= -->
+        <li class="proj-swiper-slide proj-first-slide">
+            <div class="proj-slider-wrap">
+   
+                <div class="proj-text-block">
                 <ul class="technologies-list">
                     <li class="technologies-item">#react</li>
                     <li class="technologies-item">#js</li>
@@ -19,31 +23,29 @@
                 </h2>
 
                 <a target="_blank" href="https://github.com/gWake3007/Portfolio-Project" class="project-link">See project</a>
-            </div>
+                </div>
 
                        
-            <div class="image-block">
-                <img 
-                srcset="
-                        
-                ../img/projects/mobile_new/image-mob-first@1x.jpg        311w,
-                ../img/projects/mobile_new/image-mob-first@2x.jpg        622w,
-                ../img/projects/desk_tablet_new/image-desk-first@1x.jpg  614w,    
-                ../img/projects/desk_tablet_new/image-desk-first@2x.jpg 1228w
+                <div class="image-block">
+                <img srcset="
+                /src/img/projects/mobile_new/image-mob-first@1x.jpg        311w,
+                /src/img/projects/mobile_new/image-mob-first@2x.jpg        622w,
+                /src/img/projects/desk_tablet_new/image-desk-first@1x.jpg  614w,    
+                /src/img/projects/desk_tablet_new/image-desk-first@2x.jpg 1228w
                 "
                 sizes="(min-width: 768px) 614px, (min-width: 320px) 311px"
-                src="../img/projects/mobile_new/image-mob-first@1x.jpg"
+                src="/src/img/projects/mobile_new/image-mob-first@1x.jpg"
                 class="projects-image" 
                 alt="Foto"
                 >
+                </div>
             </div>
-        </div>
-
+        </li>
          
                         <!-- ================ Card 2 ======================= -->
-
-        <div class="slider-wrap">
-            <div class="text-block">
+        <li class="proj-swiper-slide proj-second-slide">
+            <div class="proj-slider-wrap">
+                <div class="proj-text-block">
                 <ul class="technologies-list">
                     <li class="technologies-item">#react</li>
                     <li class="technologies-item">#js</li>
@@ -56,27 +58,29 @@
                 </h2>
         
                 <a target="_blank" href="https://github.com/gWake3007/Portfolio-Project" class="project-link">See project</a>
-            </div>
-            <div class="image-block">
+                 </div>
+
+                <div class="image-block">
                 <img 
                 srcset="
-                ../img/projects/mobile_new/image-mob-second@1x.jpg        311w,
-                ../img/projects/mobile_new/image-mob-second@2x.jpg        622w,
-                ../img/projects/desk_tablet_new/image-desk-second@1x.jpg  314w,
-                ../img/projects/desk_tablet_new/image-desk-second@2x.jpg  1228w
+                ../../src/img/projects/mobile_new/image-mob-second@1x.jpg        311w,
+                ../../src/img/projects/mobile_new/image-mob-second@2x.jpg        622w,
+                ../../src/img/projects/desk_tablet_new/image-desk-second@1x.jpg  314w,
+                ../../src/img/projects/desk_tablet_new/image-desk-second@2x.jpg  1228w
                 " 
                 sizes="(min-width: 768px) 614px, (min-width: 320px) 311px"
-                src="../img/projects/mobile_new/image-mob-second@1x.jpg"
+                src="/src/img/projects/mobile_new/image-mob-second@1x.jpg"
                 class="projects-image" 
                 alt="Foto">
+                </div>
             </div>
-        </div>
-
+        </li>
 
                         <!-- ================  Card 3 ======================= -->
+        <li class="proj-swiper-slide proj-third-slide">
+            <div class="proj-slider-wrap">
 
-        <div class="slider-wrap">
-            <div class="text-block">
+                <div class="proj-text-block">
                 <ul class="technologies-list">
                     <li class="technologies-item">#react</li>
                     <li class="technologies-item">#js</li>
@@ -89,37 +93,45 @@
                 </h2>
         
                 <a target="_blank" href="https://github.com/gWake3007/Portfolio-Project" class="project-link">See project</a>
-            </div>
-            <div class="image-block">
-                <img srcset="../img/projects/mobile_new/image-mob-third@1x.jpg      311w,
-                ../img/projects/mobile_new/image-mob-third@2x.jpg          622w,
-                ../img/projects/desk_tablet_new/image-desk-third@1x.jpg    614w,
-                ../img/projects/desk_tablet_new/image-desk-third@2x.jpg   1228w
+                 </div>
+
+                <div class="image-block">
+                <img srcset="
+                ./src/img/projects/mobile_new/image-mob-third@1x.jpg          311w,
+                ./src/img/projects/mobile_new/image-mob-third@2x.jpg          622w,
+                ./src/img/projects/desk_tablet_new/image-desk-third@1x.jpg    614w,
+                ./src/img/projects/desk_tablet_new/image-desk-third@2x.jpg   1228w
                 "
                 sizes="(min-width: 768px) 614px, (min-width: 320px) 311px"
-                src="../img/projects/mobile_new/image-mob-third@1x.jpg" 
+                src="/src/img/projects/mobile_new/image-mob-third@1x.jpg" 
                 class="projects-image" 
                 alt="Foto">
+                 </div>
             </div>
-        </div>
+        </li>
+    </ul>
 
-                <!-- ==============Buttons========== -->
+                 <!-- ==============Buttons========== -->
                 
                 
-                <div class="projects-buttons-wrap">
+            <div class="projects-buttons-wrap">
+
+                <div class="proj-btn-left-wrapper">
                     <button type="button" class="projects-button proj-left-button">
                         <svg class="button-arrow" width="25" height="24" aria-label="arrow left">
-                            <use href="../img/icons/sprites.svg#arrow-narrow-right"></use>
+                            <use href="../../src/img/icons/sprites.svg#arrow-narrow-right"></use>
                         </svg>
-                    </button>
-                
-                    <button type="button" class="projects-button proj-right-button">
-                        <svg class="button-arrow" width="24" height="24" aria-label="arrow right">
-                            <use href="../img/icons/sprites.svg#arrow-narrow-right"></use>
-                        </svg>
-                
                     </button>
                 </div>
+
+                <div class="proj-btn-right-wrapper">
+                    <button type="button" class="projects-button proj-right-button">
+                        <svg class="button-arrow" width="24" height="24" aria-label="arrow right">
+                            <use href="src/img/icons/sprites.svg#arrow-narrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
 
     </div>

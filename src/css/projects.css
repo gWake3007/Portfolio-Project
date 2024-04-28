@@ -2,8 +2,11 @@
 padding-bottom: 64px;
 
 }
+.proj-swiper-wrapper {
+    list-style-type: none;
+}
 
-.text-block {
+.proj-text-block {
 border-top-left-radius: 24px;
 border-top-right-radius: 24px;
 background: #fafafa;
@@ -78,7 +81,7 @@ border-bottom-left-radius: 24px;
 border-bottom-right-radius: 24px;
 }
 
-.slider-wrap {
+.proj-slider-wrap {
     margin-bottom: 32px;
 }
 
@@ -145,7 +148,7 @@ border-bottom-right-radius: 24px;
 padding: 18px;
 }
 
-.text-block {
+.proj-text-block {
     padding: 64px;
 }
 
@@ -164,7 +167,7 @@ line-height: 1;
 margin-bottom: 32px;
 }
 
-.slider-wrap {
+.proj-slider-wrap {
     margin-bottom: 64px;
 }
 .projects-button {
