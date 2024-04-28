@@ -1,11 +1,21 @@
+.section-covers {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .container-covers {
-  max-width: 375px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 508px;
   margin: 0 auto;
   width: 100%;
   min-width: 320px;
-  padding-bottom: 64px;
+  margin-bottom: 64px;
 }
 
 .hidden {
@@ -15,7 +25,6 @@
 .content {
   position: relative;
   padding-bottom: 40px;
-  width: 375px;
   height: 508px;
   background-image: url(../img/covers/png/covers_png_1x.png);
   overflow: hidden;
@@ -28,7 +37,7 @@
 }
 
 .marquee__inner {
-  height: 100;
+  height: 100%;
   display: flex;
   transform: rotate(16deg);
 }
@@ -42,7 +51,7 @@
   justify-content: center;
   white-space: nowrap;
   animation-name: marqueeLine;
-  animation-duration: 15s;
+  animation-duration: 80s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   object-fit: cover;
@@ -59,15 +68,17 @@
     transform: translateX(-569%);
   }
 }
-
+.animate-marquee {
+  animation-play-state: running;
+}
 /*=========  TABLET  =========*/
 @media screen and (min-width: 768px) {
   .container-covers {
-    max-width: 768px;
-    padding-bottom: 96px;
+    max-width: 100%;
+    margin-bottom: 96px;
   }
   .content {
-    width: 768px;
+    width: 100%;
     height: 960px;
   }
   .marquee__line {
@@ -88,11 +99,11 @@
 /*=========  DESKTOP  =========*/
 @media screen and (min-width: 1440px) {
   .container-covers {
-    max-width: 1440px;
-    padding-bottom: 164px;
+    max-width: 100%;
+    margin-bottom: 164px;
   }
   .content {
-    width: 1440px;
+    width: 100%;
     height: 960px;
   }
   @keyframes marqueeLine {
