@@ -1,7 +1,7 @@
 import axios from 'axios';
 const axios = require('axios').default;
 
-import * as basicLightbox from 'basiclightbox'
+import * as basicLightbox from 'basiclightbox';
 
 document.getElementsByClassName("footer-form").addEventListener("submit", async function (event) {
   event.preventDefault();
@@ -14,9 +14,6 @@ document.getElementsByClassName("footer-form").addEventListener("submit", async 
     alert("Please fill out all required fields correctly!");
     return;
   }
-
-  const formData = new FormData(this);
-
   try {
     const response = await axios.post("https://portfolio-js.b.goit.study/api/requests", formData);
 
@@ -38,3 +35,12 @@ document.getElementsByClassName("footer-form").addEventListener("submit", async 
     alert("An error occurred. Please try again later.");
   }
 });
+
+
+// axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
+
+// axios
+//   .get('/requests')
+//   .then(resp => console.log(resp.data))
+//   .catch(err => console.log(err));
+
