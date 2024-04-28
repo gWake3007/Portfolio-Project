@@ -61,6 +61,6 @@ form.addEventListener("submit", submitForm);
 function submitForm (event) {
   event.preventDefault();
   const form = event.target;
-  const {userEmail, userComments} = form.nextElementSibling.value;
+  const {userEmail, userComments} = form.elements.value;
   console.log(userEmail, userComments);
 }
