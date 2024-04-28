@@ -112,6 +112,7 @@ border-bottom-right-radius: 24px;
 
 .button-arrow {
     stroke: #3B3B3B;
+    transition: 0.5s;
 }
 
 .projects-button:hover .button-arrow,
