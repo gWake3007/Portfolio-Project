@@ -1,6 +1,12 @@
 .hero {
   padding-top: 281px;
-  background-image: url(../img/hero/Hero.png);
+  background-image: url(../img/hero/hero_mobile_1x.png);
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.hero-section {
+  background-size: cover;
 }
 
 .hero-title {
@@ -57,7 +63,7 @@
 @media screen and (min-width: 768px) {
     .hero {
         padding-top: 300px;
-        background-image: url(../img/hero/Hero.png);
+        background-image: url(../img/hero/hero_tablet_1x.png);
     }
     .hero-title {
         font-size: 90px;
@@ -92,6 +98,9 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .hero {
+    background-image: url(../img/hero/hero_desctop_1x.png);
+  }
     .hero-title {
         max-width: 1084px;
     }
