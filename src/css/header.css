@@ -126,8 +126,9 @@
 }
 
 .modal-content {
-  background-image: url(/img/hero/mob_1x.png);
+  background-image: url(/img/hero/mobile_menu_1x.png);
   background-size: cover;
+  background-repeat: no-repeat;
   margin: auto;
   width: 100%;
   height: 100%;
@@ -140,19 +141,12 @@
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi) {
     .container-hero {
-      background-image: url(/img/hero/mob_2x.png);
+      background-image: url(/img/hero/mobile_menu_2x.png);
 
       animation: modal-content 10s infinite;
       background-repeat: no-repeat;
     }
   }
-}
-
-.modal-content {
-  animation: container-hero 10s infinite;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(/img/hero/mob_1x.png);
 }
 
 .close {
