@@ -3,8 +3,10 @@
 
 // import * as basicLightbox from 'basiclightbox';
 
-// document.getElementsByClassName("footer-form").addEventListener("submit", async function (event) {
-//   event.preventDefault();
+
+document.getElementsById("footerForm").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
 
 //   const userEmail = document.querySelector(".footer-input[name='userEmail']").value;
 //   const userComments = document.getElementById("user-comments").value;
