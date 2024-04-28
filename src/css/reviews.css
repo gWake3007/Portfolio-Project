@@ -1,13 +1,16 @@
 .reviews-section {
+  padding-top: 64px;
   padding-bottom: 64px;
 }
 @media screen and (min-width: 768px) {
   .reviews-section {
+    padding-top: 96px;
     padding-bottom: 96px;
   }
 }
 @media screen and (min-width: 1440px) {
   .reviews-section {
+    padding-top: 164px;
     padding-bottom: 164px;
   }
 }
