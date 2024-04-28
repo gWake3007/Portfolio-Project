@@ -25,6 +25,14 @@ function clickEscapeModal(e) {
     modal.style.display = 'none';
   }
 }
+
+modalContent.addEventListener('click', exitModal);
+
+function exitModal(e) {
+  if (e.currentTarget) {
+    modal.style.display = 'none';
+  }
+}
 //* ==========================Modal-Window_(END)=====================================
 
 //* ==========================Mobile-Menu_(START)=====================================
@@ -43,5 +51,22 @@ function openClose(e) {
     menuList.classList.add('hidden-menu');
   }
   e.stopPropagation();
+}
+
+listItems.forEach(item => {
+  item.addEventListener('click', eventOnEachElement);
+});
+function eventOnEachElement(e) {
+  menuList.classList.remove('visible-menu');
+  menuList.classList.add('hidden-menu');
+
+  e.stopPropagation();
+}
+
+document.addEventListener('click', eventOnTheWholeElement);
+
+function eventOnTheWholeElement() {
+  menuList.classList.remove('visible-menu');
+  menuList.classList.add('hidden-menu');
 }
 //* ==========================Mobile-Menu_(END)=====================================

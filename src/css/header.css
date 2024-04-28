@@ -155,21 +155,6 @@
   background-image: url(/img/hero/mob_1x.png);
 }
 
-/* @keyframes  {
-  0% {
-    background-image: url(/img/hero/mob_1x.png);
-  }
-  33% {
-    background-image: url(/img/hero/mob_1x.png);
-  }
-  66% {
-    background-image: url(/img/hero/mob_1x.png);
-  }
-  100% {
-    background-image: url(/img/hero/mob_1x.png);
-  }
-} */
-
 .close {
   color: #aaaaaa;
   float: right;
