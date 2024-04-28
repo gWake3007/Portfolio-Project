@@ -3,10 +3,7 @@
   background-image: url(../img/hero/hero_mobile_1x.png);
   background-position: left;
   background-repeat: no-repeat;
-}
-
-.hero-section {
-  background-size: cover;
+  background-size: contain;
 }
 
 .hero-title {
@@ -15,7 +12,7 @@
   font-weight: 500;
   font-size: 50px;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.06em;
   margin-bottom: 212px;
 }
 
@@ -104,7 +101,7 @@
     background-image: url(../img/hero/hero_desctop_1x.png);
   }
   .hero-title {
-    max-width: 1084px;
+    max-width: 1200px;
   }
   .hero-container-title {
     display: flex;
