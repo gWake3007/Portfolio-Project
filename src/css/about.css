@@ -135,48 +135,81 @@ ul.accordion-list li.accordion-item .ac-text {
   transform: rotate(180deg) translate(-50%, -50%);
 }
 
-.tech-box {
+.about-me-skills-wrapper {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  margin-top: 32px;
+  gap: 52px;
 }
 
-.tech-list {
-  display: flex;
-  flex-direction: row;
+.skills-container {
+  width: 260px;
+  overflow: hidden;
 }
 
-.tech-box .tech-list li {
-  border-radius: 100%;
+.skills-slide {
+  display: flex !important;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fafafa;
   width: 130px !important;
-  height: 130px;
+  height: 130px !important;
+  border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.tech-list li p {
-  color: #fafafa;
-}
-
-.red-backgr {
-  border: none;
+.skills-slide.swiper-slide-active {
   background-color: #ed3b44;
+  font-weight: 600;
+  transition: background-color 700ms linear, font-weight 700ms linear;
 }
 
-.tech-box .arrow-box {
+.skills-button-next svg {
+  stroke: #fafafa33;
+  width: 28px;
+  fill: none;
+}
+
+.about-me-skills-svg {
+  cursor: pointer;
+  transition: stroke 250ms linear;
+}
+
+div.swiper-button-next.skills-button-next:hover .about-me-skills-svg {
+  stroke: #fafafa;
+}
+
+div.swiper-button-next.skills-button-next:hover .about-me-skills-svg {
+  stroke: #fafafa;
+}
+
+div.swiper-button-next.skills-button-next {
+  position: absolute;
+  top: 50%;
+  right: 7px;
   width: 28px;
   height: 28px;
+  z-index: 9999;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  pointer-events: all;
+  opacity: inherit;
+  rotate: 180deg;
+
+  transition: box-shadow 250ms linear;
 }
 
-.arrow-right-icon {
-  rotate: 180deg;
-  margin-inline-start: 55px;
-}
+/* div.swiper-button-next.skills-button-next:hover {
+  box-shadow: 0 0 15px #ed3b44;
+} */
 
 /* Breaking Point 768px */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .about-section {
     padding-block-end: 96px;
   }
@@ -206,13 +239,29 @@ ul.accordion-list li.accordion-item .ac-text {
     gap: 16px;
   }
 
-  .tech-box .tech-list li {
+  .skills-container {
+    width: 600px;
+    overflow: hidden;
+    margin-top: 64px;
+  }
+  .skills-slide {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.02em;
     width: 200px !important;
-    height: 200px;
+    height: 200px !important;
   }
 
-  .tech-list li p {
-    font-size: 20px;
+  .about-me-skills-svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  div.swiper-button-next.skills-button-next {
+    bottom: 3.5%;
+    top: 140px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -223,8 +272,15 @@ ul.accordion-list li.accordion-item .ac-text {
     padding-block-end: 164px;
   }
 
+  .about-header {
+    font-size: 38px;
+    line-height: 1.05263;
+  }
+
   .header-box {
-    max-width: 680px;
+     width: 680px;
+    height: 700px;
+    padding: 64px 64px 0px 64px;
   }
 
   .main-box,
@@ -253,6 +309,26 @@ ul.accordion-list li.accordion-item .ac-text {
   div.education p.ac-text:first-child {
     padding-right: 96px;
   }
+
+  .skills-container {
+    width: 1200px;
+    overflow: hidden;
+    margin-left: 32px;
+  }
+
+  .skills-slide {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    width: 200px !important;
+    height: 200px !important;
+  }
+  
+  
+  div.swiper-button-next.skills-button-next {
+    right: 32px;
+  }
 }
+
 
 
