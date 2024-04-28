@@ -1,16 +1,18 @@
 // Отримання секції "Covers"
-const coversSection = document.querySelector('.container-covers');
+const coversSection = document.querySelector('.section-covers');
+
 
 // Функція, яка запускає або зупиняє анімацію
 function toggleAnimation(isVisible) {
-  const marqueeInner = coversSection.querySelector('.marquee__inner');
+  const marqueeInner = coversSection.querySelector('.container-covers');
   
   // Додати або видалити клас для запуску або зупинки анімації
   if (isVisible) {
     marqueeInner.classList.add('animate-marquee');
   } else {
     marqueeInner.classList.remove('animate-marquee');
-  }
+    }
+    console.log(marqueeInner, "hello!!!");
 }
 
 // Налаштування Intersection Observer
