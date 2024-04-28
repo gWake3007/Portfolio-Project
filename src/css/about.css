@@ -229,7 +229,7 @@ stroke: #fafafa;
   }
 
   .header-box {
-    width: 704px;
+    width: 100%;
     height: 700px;
     padding: 64px 64px 0px 64px;
   }
