@@ -120,10 +120,17 @@ ul.accordion-list li.accordion-item .ac-text {
   margin-left: 44px;
   flex-shrink: 0;
   display: block;
+  transition: box-shadow 250ms linear;
 }
 
+.circle-box:hover {
+  box-shadow: 0 0 15px #ed3b44;
+}
+
+
+
 .list-item-icon {
-  transition: transform 0.5s;
+  transition: transform 0.5s, box-shadow 700ms linear;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -138,8 +145,7 @@ ul.accordion-list li.accordion-item .ac-text {
 .about-me-skills-wrapper {
   position: relative;
   display: flex;
-  margin-top: 32px;
-  gap: 52px;
+  align-items: center;
 }
 
 .skills-container {
@@ -170,6 +176,9 @@ ul.accordion-list li.accordion-item .ac-text {
   stroke: #fafafa33;
   width: 28px;
   fill: none;
+  rotate: 180deg;
+  top: 50%;
+  left: 50%;
 }
 
 .about-me-skills-svg {
@@ -177,18 +186,10 @@ ul.accordion-list li.accordion-item .ac-text {
   transition: stroke 250ms linear;
 }
 
-div.swiper-button-next.skills-button-next:hover .about-me-skills-svg {
-  stroke: #fafafa;
-}
 
-div.swiper-button-next.skills-button-next:hover .about-me-skills-svg {
-  stroke: #fafafa;
-}
-
-div.swiper-button-next.skills-button-next {
+div.skills-button-next {
   position: absolute;
-  top: 50%;
-  right: 7px;
+  right: 1px;
   width: 28px;
   height: 28px;
   z-index: 9999;
@@ -199,14 +200,17 @@ div.swiper-button-next.skills-button-next {
   border-radius: 50%;
   pointer-events: all;
   opacity: inherit;
-  rotate: 180deg;
 
   transition: box-shadow 250ms linear;
 }
 
-/* div.swiper-button-next.skills-button-next:hover {
+ div.skills-button-next:hover {
   box-shadow: 0 0 15px #ed3b44;
-} */
+} 
+
+div.skills-button-next svg:hover { 
+stroke: #fafafa;
+}
 
 /* Breaking Point 768px */
 @media screen and (min-width: 768px) and (max-width: 1439px) {
@@ -242,8 +246,8 @@ div.swiper-button-next.skills-button-next {
   .skills-container {
     width: 600px;
     overflow: hidden;
-    margin-top: 64px;
   }
+
   .skills-slide {
     font-weight: 500;
     font-size: 20px;
@@ -252,14 +256,7 @@ div.swiper-button-next.skills-button-next {
     height: 200px !important;
   }
 
-  .about-me-skills-svg {
-    width: 40px;
-    height: 40px;
-  }
-
-  div.swiper-button-next.skills-button-next {
-    bottom: 3.5%;
-    top: 140px;
+  div.skills-button-next {
     width: 40px;
     height: 40px;
   }
@@ -327,6 +324,7 @@ div.swiper-button-next.skills-button-next {
   
   div.swiper-button-next.skills-button-next {
     right: 32px;
+    top: 50%;
   }
 }
 
