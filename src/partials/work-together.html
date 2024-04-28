@@ -1,10 +1,32 @@
 <footer class="footer" id="footer">
+
     <div class="container-work-together container-footer">
         <div class="footer-text letswork">
             <h2 class="title-footer">
                 <picture>
-                    <source srcset="../img/head_foot_icon/head_foot_icon_X1.jpg" alt="Head-icon-img">
-                    <img class="img-footer" srcset="../img/head_foot_icon/head_foot_icon_X1.webp" width="70" height="70" />
+
+                    <source 
+                    srcset="../img/head_foot_icon/head_foot_icon_X1.webp 1x,
+                     ../img/head_foot_icon/head_foot_icon_X2.webp 2x" 
+                    media="(min-width: 768px)"
+                    alt="Head-icon-img">
+
+                    <source 
+                    srcset="../img/head_foot_icon/head_foot_icon_X1.webp 1x,
+                     ../img/head_foot_icon/head_foot_icon_X2.webp 2x"
+                    media="(min-width: 320px) and (max-width: 767px)"
+                    width="44"
+                    height="44"
+                    alt="Head-icon-img">
+
+                    <img 
+                    class="img-footer" 
+                    srcset="../img/head_foot_icon/head_foot_icon_X1.webp 1x,
+                     ../img/head_foot_icon/head_foot_icon_X2.webp 2x"
+                     loading="lazy"
+                     alt="person head footer"
+                     />
+
                 </picture>
                 LET'S
                 <span class="title-span">WORK<br/></span>
@@ -14,11 +36,21 @@
 
             <form class="footer-form" id="form">
                 <div class="container-input">
-                    <input class="footer-input input" name="userEmail" type="email" placeholder="clients@gmail.com" required
-                        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+                    <input 
+                    class="footer-input input" 
+                    name="userEmail" 
+                    type="email" 
+                    placeholder="clients@gmail.com" 
+                    required
+                    pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
             
-                    <input class="footer-input" type="text" name="userComments" id="user-comments" required placeholder="comments"
-                        aria-label="type your comment">
+                    <input 
+                    class="footer-input" 
+                    type="text" 
+                    name="userComments" 
+                    id="user-comments" 
+                    required placeholder="comments"
+                    aria-label="type your comment">
                 </div>
             
                 <button class="footer-btn" type="submit" aria-label="send-comment">Send</button>
@@ -35,5 +67,24 @@
                     </li>
                 </ul>
             </address>
+
+            <!--Modal window-->
+
+            <!--
+            <input type="checkbox" id="modalCheckbox" class="visually-hidden">
+            <div id="modalW" class="backdrop visually-hidden">
+                <div class="modal-window">
+                    <button class="modal-button" type="button" aria-label="close-button">
+                        <svg class="modal-btn-icon" width="22" height="22">
+                                <use href="../img/icons/sprites.svg#closeX"></use>
+                        </svg>
+                    </button>
+                    <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
+                    <p class="modal-text">
+                        The manager will contact you shortly to discuss further details and
+                        opportunities for cooperation. Please stay in touch.
+                    </p>
+                </div>
+            </div>-->
     </div>
 </footer>
