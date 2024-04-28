@@ -113,10 +113,15 @@ border-bottom-right-radius: 24px;
     border: 1px solid rgba(250, 250, 250, 0.5);
 }
 
+.button-arrow {
+    stroke: #3B3B3B;
+    transition: 0.5s;
+}
 
-.projects-button:hover .button-arrow
+.projects-button:hover .button-arrow,
  .projects-button:focus .button-arrow {
     fill: #ffffff;
+    stroke: #ffffff;
 }
 
 
