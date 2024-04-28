@@ -15,7 +15,6 @@
   margin: 0 auto;
   width: 100%;
   min-width: 320px;
-  margin-bottom: 64px;
 }
 
 .hidden {
@@ -81,7 +80,6 @@
 @media screen and (min-width: 768px) {
   .container-covers {
     max-width: 100%;
-    margin-bottom: 96px;
   }
   .content {
     width: 100%;
@@ -106,7 +104,6 @@
 @media screen and (min-width: 1440px) {
   .container-covers {
     max-width: 100%;
-    margin-bottom: 164px;
   }
   .content {
     width: 100%;
