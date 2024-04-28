@@ -3,8 +3,14 @@
 
         <h3 class="projects-title">PROJECTS</h3>
 
-        <div class="slider-wrap">
-            <div class="text-block">
+    <ul class="proj-swiper-wrapper">
+
+       
+                        <!-- ================ Card 1 ======================= -->
+        <li class="proj-swiper-slide proj-first-slide">
+            <div class="proj-slider-wrap">
+   
+                <div class="proj-block proj-text-block">
                 <ul class="technologies-list">
                     <li class="technologies-item">#react</li>
                     <li class="technologies-item">#js</li>
@@ -17,37 +23,112 @@
                 </h2>
 
                 <a target="_blank" href="https://github.com/gWake3007/Portfolio-Project" class="project-link">See project</a>
+                </div>
+
+                       
+                <div class="proj-block proj-image-block">
+                <img srcset="
+                ./img/projects/image-mob-first@1x.jpg        311w,
+                ./img/projects/image-mob-first@2x.jpg        622w,
+                ./img/projects/image-desk-first@1x.jpg  614w,    
+                ./img/projects/image-desk-first@2x.jpg 1228w
+                "
+                sizes="(min-width: 768px) 614px, (min-width: 320px) 311px"
+                src="./img/projects/mobile_new/image-mob-first@1x.jpg"
+                alt="Foto"
+                >
+                </div>
             </div>
-            <div class="image-block">
-                <img class="projects-image" alt="Foto" width="311" height="195">
+        </li>
+         
+                        <!-- ================ Card 2 ======================= -->
+        <li class="proj-swiper-slide proj-second-slide">
+            <div class="proj-slider-wrap">
+                <div class="proj-block proj-text-block">
+                <ul class="technologies-list">
+                    <li class="technologies-item">#react</li>
+                    <li class="technologies-item">#js</li>
+                    <li class="technologies-item">#node js</li>
+                    <li class="technologies-item">#git</li>
+                </ul>
+        
+                <h2 class="projects-description">
+                    Programming Across Borders: Ideas, Technologies, Innovations
+                </h2>
+        
+                <a target="_blank" href="https://github.com/gWake3007/Portfolio-Project" class="project-link">See project</a>
+                 </div>
+
+                <div class="proj-block proj-image-block">
+                <img 
+                srcset="
+                ./img/projects/image-mob-second@1x.jpg   311w,
+                ./img/projects/image-mob-second@2x.jpg   622w,
+                ./img/projects/image-desk-second@1x.jpg  314w,
+                ./img/projects/image-desk-second@2x.jpg  1228w
+                " 
+                sizes="(min-width: 768px) 614px, (min-width: 320px) 311px"
+                src="./img/projects/image-mob-second@1x.jpg"
+                alt="Foto">
+                </div>
             </div>
-        </div>
+        </li>
 
-        <div class="projects-buttons-wrap">
-                <button type="button" class="projects-button proj-left-button">
-                    <svg 
-                    class="button-arrow" 
-                    width="25" 
-                    height="24"
-                    aria-label="arrow left"
-                    >
-                        <use href="../img/icons/sprites.svg#arrow-narrow-right"></use>
-                    </svg>
-                </button>
+                        <!-- ================  Card 3 ======================= -->
+        <li class="proj-swiper-slide proj-third-slide">
+            <div class="proj-slider-wrap">
 
-                <button type="button" class="projects-button proj-right-button">
-                    <svg 
-                    class="button-arrow" 
-                    width="25" 
-                    height="24" 
-                    aria-label="arrow right"
-                    >
-                        <use href="../img/icons/sprites.svg#arrow-narrow-right"></use>
-                    </svg>
+                <div class="proj-block proj-text-block">
+                <ul class="technologies-list">
+                    <li class="technologies-item">#react</li>
+                    <li class="technologies-item">#js</li>
+                    <li class="technologies-item">#node js</li>
+                    <li class="technologies-item">#git</li>
+                </ul>
+        
+                <h2 class="projects-description">
+                    Programming Across Borders: Ideas, Technologies, Innovations
+                </h2>
+        
+                <a target="_blank" href="https://github.com/gWake3007/Portfolio-Project" class="project-link">See project</a>
+                 </div>
 
-                </button>
+                <div class="proj-block proj-image-block">
+                <img srcset="
+                ./img/projects/image-mob-third@1x.jpg    311w,
+                ./img/projects/image-mob-third@2x.jpg    622w,
+                ./img/projects/image-desk-third@1x.jpg   614w,
+                ./img/projects/image-desk-third@2x.jpg  1228w
+                "
+                sizes="(min-width: 768px) 614px, (min-width: 320px) 311px"
+                src="./img/projects/image-mob-third@1x.jpg" 
+                alt="Foto">
+                 </div>
+            </div>
+        </li>
+    </ul>
 
-        </div>
+                 <!-- ==============Buttons========== -->
+                
+                
+            <div class="projects-buttons-wrap">
+
+                <div class="proj-btn-left-wrapper">
+                    <button type="button" class="projects-button proj-left-button">
+                        <svg class="button-arrow" width="24" height="24" aria-label="arrow left">
+                            <use href="./img/icons/sprites.svg#arrow-narrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="proj-btn-right-wrapper">
+                    <button type="button" class="projects-button proj-right-button">
+                        <svg class="button-arrow" width="24" height="24" aria-label="arrow right">
+                            <use href="./img/icons/sprites.svg#arrow-narrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
 
     </div>

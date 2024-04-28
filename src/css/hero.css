@@ -1,13 +1,21 @@
 .hero {
   padding-top: 281px;
-  background-image: url(../img/hero/Hero.png);
+  background-image: image-set(
+    url(../img/hero/hero_mobile_1x.png) 1x,
+    url(../img/hero/hero_mobile_2x.png) 2x
+  );
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .hero-title {
+  text-transform: uppercase;
   color: var(--main-text);
+  font-weight: 500;
   font-size: 50px;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.06em;
   margin-bottom: 212px;
 }
 
@@ -55,49 +63,58 @@
 }
 
 @media screen and (min-width: 768px) {
-    .hero {
-        padding-top: 300px;
-        background-image: url(../img/hero/Hero.png);
-    }
-    .hero-title {
-        font-size: 90px;
-    }
-    .hero-social-links {
-        max-width: none;
-        justify-content: flex-end;
-        gap: 8px;
-    }
-    .hero-social-link-item.first {
-        padding: 18px 20px;
-      }
-      
-      .hero-social-link-item.second {
-        padding: 18px 17px;
-      }
-      
-      .hero-social-link-item.third {
-        padding: 18px;
-      }
-      
-      .hero-social-link-item.fourth {
-        padding: 18px 16px;
-      }
-      
-      .hero-social-link-item.fifth {
-        padding: 18px 24px;
-      }
-      .hero-social-link-item a {
-        font-size: 16px;
-      }
+  .hero {
+    padding-top: 300px;
+    background-image: image-set(
+      url(../img/hero/hero_tablet_1x.png) 1x,
+      url(../img/hero/hero_tablet_2x.png) 2x
+    );
+  }
+  .hero-title {
+    font-size: 90px;
+  }
+  .hero-social-links {
+    max-width: none;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .hero-social-link-item.first {
+    padding: 18px 20px;
+  }
+
+  .hero-social-link-item.second {
+    padding: 18px 17px;
+  }
+
+  .hero-social-link-item.third {
+    padding: 18px;
+  }
+
+  .hero-social-link-item.fourth {
+    padding: 18px 16px;
+  }
+
+  .hero-social-link-item.fifth {
+    padding: 18px 24px;
+  }
+  .hero-social-link-item a {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .hero-title {
-        max-width: 1084px;
-    }
-    .hero-container-title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .hero {
+    background-image: image-set(
+      url(../img/hero/hero_desctop_1x.png) 1x,
+      url(../img/hero/hero_desctop_2x.png) 2x
+    );
+  }
+  .hero-title {
+    max-width: 1200px;
+  }
+  .hero-container-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
