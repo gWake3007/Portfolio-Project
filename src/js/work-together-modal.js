@@ -49,5 +49,5 @@ document
 
 // axios
 //   .get('/requests')
-//   .then(resp => console.log(resp))
+//   .then(resp => console.log(resp.data))
 //   .catch(err => console.log(err));
