@@ -3,7 +3,7 @@ const axios = require('axios').default;
 
 import * as basicLightbox from 'basiclightbox'
 
-document.getElementsByClassName("footer-form").addEventListener("submit", async function (event) {
+document.getElementsById("footerForm").addEventListener("submit", async function (event) {
   event.preventDefault();
 
   const userEmail = document.querySelector(".footer-input[name='userEmail']").value;
