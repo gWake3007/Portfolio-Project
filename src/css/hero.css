@@ -10,10 +10,9 @@
 }
 
 .hero-title {
-  font-family: 'Inter Tight', sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  text-transform: uppercase;
   color: var(--main-text);
+  font-weight: 500;
   font-size: 50px;
   line-height: 1;
   letter-spacing: -0.03em;
