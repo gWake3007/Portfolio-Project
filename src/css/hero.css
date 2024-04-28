@@ -1,6 +1,9 @@
 .hero {
   padding-top: 281px;
-  background-image: url(../img/hero/hero_mobile_1x.png);
+  background-image: image-set(
+    url(../img/hero/hero_mobile_1x.png) 1x,
+    url(../img/hero/hero_mobile_2x.png) 2x
+  );
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
@@ -62,7 +65,10 @@
 @media screen and (min-width: 768px) {
   .hero {
     padding-top: 300px;
-    background-image: url(../img/hero/hero_tablet_1x.png);
+    background-image: image-set(
+      url(../img/hero/hero_tablet_1x.png) 1x,
+      url(../img/hero/hero_tablet_2x.png) 2x
+    );
   }
   .hero-title {
     font-size: 90px;
@@ -98,7 +104,10 @@
 
 @media screen and (min-width: 1440px) {
   .hero {
-    background-image: url(../img/hero/hero_desctop_1x.png);
+    background-image: image-set(
+      url(../img/hero/hero_desctop_1x.png) 1x,
+      url(../img/hero/hero_desctop_2x.png) 2x
+    );
   }
   .hero-title {
     max-width: 1200px;
