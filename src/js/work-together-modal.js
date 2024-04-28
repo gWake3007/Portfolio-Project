@@ -53,7 +53,10 @@ function submitForm(event) {
   const { userEmail, userComments } = form.elements;
   postRequests(userEmail.value, userComments.value)
     .then((resp) =>  {
+      // КОД ПИСАТЬ ТУТ.
       console.log(resp);
     })
-    .catch(err => console.log(err));
+    .catch((err) =>  {
+      // И ТУТ.
+      console.log(err)});
 }
