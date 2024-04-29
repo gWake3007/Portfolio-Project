@@ -2,9 +2,9 @@
     padding-bottom: 32px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
     .section-work-together {
-        padding-bottom: 169px;
+        padding: 0 93px 169px 164px;
     }
 }
 
@@ -112,6 +112,12 @@
     }
 }
 
+@media screen and (min-width: 1440px) {
+    .footer-input {
+        gap: 32px;
+    }
+}
+
 .footer-input:hover {
     color: rgb(250, 250, 250);
 }
@@ -132,6 +138,12 @@
         width: 150px;
         height: 150px;
         border-radius: 50%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .cont-btn {
+        padding-left: 54px;
     }
 }
 
