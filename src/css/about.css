@@ -153,13 +153,13 @@ ul.accordion-list li.accordion-item .ac-text {
   overflow: hidden;
 }
 
-.skills-slide {
-  display: flex !important;
+ul.skills-wrapper li.swiper-slide.skills-slide {
+  display: flex;
   font-weight: 500;
   font-size: 16px;
   color: #fafafa;
-  width: 130px !important;
-  height: 130px !important;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
   justify-content: center;
@@ -248,12 +248,12 @@ stroke: #fafafa;
     overflow: hidden;
   }
 
-  .skills-slide {
+  ul.skills-wrapper li.swiper-slide.skills-slide {
     font-weight: 500;
     font-size: 20px;
     letter-spacing: -0.02em;
-    width: 200px !important;
-    height: 200px !important;
+    width: 200px;
+    height: 200px;
   }
 
   div.skills-button-next {
@@ -313,12 +313,12 @@ stroke: #fafafa;
     margin-left: 32px;
   }
 
-  .skills-slide {
+  ul.skills-wrapper li.swiper-slide.skills-slide {
     font-weight: 500;
     font-size: 20px;
     letter-spacing: -0.02em;
-    width: 200px !important;
-    height: 200px !important;
+    width: 200px;
+    height: 200px;
   }
   
   
