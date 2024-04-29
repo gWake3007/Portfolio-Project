@@ -132,14 +132,10 @@ ul.accordion-list li.accordion-item .ac-text {
 .list-item-icon {
   transition: transform 0.5s, box-shadow 700ms linear;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(50%, 50%);
-  rotate: 180deg;
 }
 
 .is-active .list-item-icon {
-  transform: rotate(180deg) translate(-50%, -50%);
+  transform: rotate(180deg)
 }
 
 .about-me-skills-wrapper {
@@ -176,9 +172,9 @@ ul.skills-wrapper li.swiper-slide.skills-slide {
   stroke: #fafafa33;
   width: 28px;
   fill: none;
-  rotate: 180deg;
   top: 50%;
   left: 50%;
+  transform: scaleX(-1);
 }
 
 .about-me-skills-svg {
