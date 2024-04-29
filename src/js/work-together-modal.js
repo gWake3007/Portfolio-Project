@@ -36,7 +36,7 @@ import * as basicLightbox from 'basiclightbox';
 //   }
 // });
 
-const form = document.getElementById('form');
+const form = document.querySelector('.footer-form');
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 
@@ -46,15 +46,13 @@ async function postRequests(email, comment) {
 
 form.addEventListener('submit', submitForm);
 
+
 function submitForm(event) {
   event.preventDefault();
   const form = event.target;
   const { userEmail, userComments } = form.elements;
   postRequests(userEmail.value, userComments.value)
     .then(resp => {
-      console.log(resp);
-      console.log(resp.status);
-      // КОД ПИСАТЬ ТУТ.
       const instance = basicLightbox.create(` 
       <div id="modalW" class="backdrop visually-hidden">
                      <div class="modal-window">
@@ -69,7 +67,7 @@ function submitForm(event) {
   </div>
   </div>`);
       instance.show();
-      closeModal(resp);
+      closeModal(instance);
       userEmail.value = '';
       userComments.value = '';
     })
@@ -79,15 +77,15 @@ function submitForm(event) {
     });
 }
 
-
-function closeModal(resp) {
-  if(resp.status === 201) {
-    const buttonCloseModal = document.querySelector(".modal-button");
-    console.log(buttonCloseModal);
-    buttonCloseModal.addEventListener("click", closeModalEvent);
-  }
+function closeModal(instance) {
+  instance.element().querySelector(".modal-button").onclick = () => instance.close();
 }
 
-function closeModalEvent(event) {
-  instance.close();
-}
+// window.addEventListener("keydown", closeModalOnEsc);
+// function closeModalOnEsc(event) {
+//   if(event.keyCode === 27) {
+//     console.log("gg");
+//     instance.close();
+//   }
+//   window.removeEventListener("keydown", closeModalOnEsc);
+// }
