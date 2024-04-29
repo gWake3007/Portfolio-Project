@@ -106,15 +106,9 @@
     height: 32px;
   }
 }
-.btn-arrow:hover,
-.btn-arrow:focus {
+.reviews-prev-btn:hover .btn-arrow,
+.reviews-next-btn:hover .btn-arrow,
+.reviews-prev-btn:focus .btn-arrow,
+.reviews-next-btn:focus .btn-arrow {
   stroke: #ffffff;
-}
-
-.reviews-btn-disabled {
-  border: 1px solid #3b3b3b;
-}
-
-.btn-arrow-disabled {
-  stroke: #3b3b3b;
 }
