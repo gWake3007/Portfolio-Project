@@ -76,8 +76,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(50%, 50%);
-  rotate: 180deg;
+  transform: rotate(180deg) translate(50%, 50%);
 }
 
 .container .title {
