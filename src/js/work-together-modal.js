@@ -53,8 +53,21 @@ function submitForm(event) {
   const { userEmail, userComments } = form.elements;
   postRequests(userEmail.value, userComments.value)
     .then((resp) =>  {
-      // КОД ПИСАТЬ ТУТ.
       console.log(resp);
+      // КОД ПИСАТЬ ТУТ.
+      const instance = basicLightbox.create(`                <div class="modal-window">
+      <button class="modal-button" type="button" aria-label="close-button">
+          <svg class="modal-btn-icon" width="22" height="22">
+                  <use href="../img/icons/sprites.svg#closeX"></use>
+          </svg>
+      </button>
+      <h3 class="modal-title">${resp.data.title}</h3>
+      <p class="modal-text">${resp.data.message}
+      </p>
+  </div>`)
+      instance.show();
+      userEmail.value = "";
+      userComments.value = "";
     })
     .catch((err) =>  {
       // И ТУТ.
