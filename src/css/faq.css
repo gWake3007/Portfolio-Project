@@ -1,5 +1,5 @@
 .container-faq {
-  margin-bottom: 64px;
+  padding-bottom: 64px;
 }
 
 .list__item-title .circle {
@@ -97,8 +97,8 @@
     margin-top: 26px;
   }
 
-  .container {
-    margin-bottom: 96px;
+  .container-faq {
+    padding-bottom: 96px;
   }
 }
 
@@ -135,7 +135,7 @@
     border-bottom: none;
   }
 
-  .container {
-    margin-bottom: 164px;
+  .container-faq {
+    padding-bottom: 164px;
   }
 }
