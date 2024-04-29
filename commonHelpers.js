@@ -9,7 +9,7 @@ import{A as g,S as f,N as L,K as E,M as S,a as v,b as k}from"./assets/vendor-66e
                      <div class="modal-window">
       <button class="modal-button" type="button" aria-label="close-button">
           <svg class="modal-btn-icon" width="22" height="22">
-                  <use href="../img/icons/sprites.svg#closeX"></use>
+                  <use href="./img/icons/sprites.svg#closeX"></use>
           </svg>
       </button>
       <h3 class="modal-title">${s.data.title}</h3>
