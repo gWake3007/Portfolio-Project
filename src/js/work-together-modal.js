@@ -44,7 +44,6 @@ async function postRequests(email, comment) {
   return await axios.post('/requests', { email: email, comment: comment });
 }
 
-
 form.addEventListener('submit', submitForm);
 
 function submitForm(event) {
@@ -52,10 +51,13 @@ function submitForm(event) {
   const form = event.target;
   const { userEmail, userComments } = form.elements;
   postRequests(userEmail.value, userComments.value)
-    .then((resp) =>  {
+    .then(resp => {
       console.log(resp);
+      console.log(resp.status);
       // КОД ПИСАТЬ ТУТ.
-      const instance = basicLightbox.create(`                <div class="modal-window">
+      const instance = basicLightbox.create(` 
+      <div id="modalW" class="backdrop visually-hidden">
+                     <div class="modal-window">
       <button class="modal-button" type="button" aria-label="close-button">
           <svg class="modal-btn-icon" width="22" height="22">
                   <use href="../img/icons/sprites.svg#closeX"></use>
@@ -64,12 +66,28 @@ function submitForm(event) {
       <h3 class="modal-title">${resp.data.title}</h3>
       <p class="modal-text">${resp.data.message}
       </p>
-  </div>`)
+  </div>
+  </div>`);
       instance.show();
-      userEmail.value = "";
-      userComments.value = "";
+      closeModal(resp);
+      userEmail.value = '';
+      userComments.value = '';
     })
-    .catch((err) =>  {
+    .catch(err => {
       // И ТУТ.
-      console.log(err)});
+      console.log(err);
+    });
+}
+
+
+function closeModal(resp) {
+  if(resp.status === 201) {
+    const buttonCloseModal = document.querySelector(".modal-button");
+    console.log(buttonCloseModal);
+    buttonCloseModal.addEventListener("click", closeModalEvent);
+  }
+}
+
+function closeModalEvent(event) {
+  instance.close();
 }
