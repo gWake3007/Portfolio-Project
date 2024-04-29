@@ -110,11 +110,9 @@
     );
   }
   .hero-title {
-    max-width: 1200px;
+    max-width: 1120px;
+    margin: 0 auto;
+    margin-bottom: 212px;
   }
-  .hero-container-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
 }
