@@ -40,14 +40,29 @@ const menu = document.querySelector('.menu');
 const listItems = document.querySelectorAll('.menu-list');
 const menuList = document.querySelector('.hidden-menu');
 
-// menu.addEventListener('mouseenter', function () {
-//   menuList.classList.add('visible-menu');
-// });
-// menu.addEventListener('mouseleave', function () {
-//   menuList.classList.remove('visible-menu');
-// });
+menu.addEventListener('mouseenter', function () {
+  menuList.classList.add('visible-menu');
+});
 
-menu.addEventListener('click', openClose);
+menu.addEventListener('mouseleave', function (event) {
+  if (
+    !menu.contains(event.relatedTarget) &&
+    !menuList.contains(event.relatedTarget)
+  ) {
+    menuList.classList.remove('visible-menu');
+  }
+});
+
+menuList.addEventListener('mouseleave', function (event) {
+  if (
+    !menu.contains(event.relatedTarget) &&
+    !menuList.contains(event.relatedTarget)
+  ) {
+    menuList.classList.remove('visible-menu');
+  }
+});
+
+// menu.addEventListener('click', openClose);
 
 function openClose(e) {
   if (menuList.classList.contains('hidden-menu')) {
@@ -77,3 +92,18 @@ function eventOnTheWholeElement() {
   menuList.classList.add('hidden-menu');
 }
 //* ==========================Mobile-Menu_(END)=====================================
+
+//* ========================== Scrolling_(START)=====================================
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+anchors.forEach(anchor => {
+  anchor.addEventListener('click', function (event) {
+    event.preventDefault();
+    const blockID = anchor.getAttribute('href');
+    document.querySelector(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+});
+//* ========================== Scrolling_(END)=====================================
