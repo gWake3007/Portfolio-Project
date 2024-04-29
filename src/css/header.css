@@ -147,10 +147,11 @@
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  animation: modalFadeIn 0.7s ease;
+  animation: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes modalFadeIn {
+@keyframes transform {
   from {
     opacity: 0;
   }

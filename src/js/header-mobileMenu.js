@@ -6,10 +6,12 @@ const modalContent = document.querySelector('.modal-content');
 
 btn.onclick = function () {
   modal.style.display = 'block';
+  modal.style.transform = 'translateX(0%)';
 };
 
 span.onclick = function () {
-  modal.style.display = 'none';
+  // modal.style.display = 'none';
+  modal.style.transform = 'translateX(100%)';
 };
 
 document.onclick = function (e) {
