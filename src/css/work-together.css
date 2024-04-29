@@ -165,6 +165,13 @@
 .footer-btn:hover {
     background: rgb(224, 55, 63);
 }
+.footer-btn:hover,
+.footer-btn:focus {
+    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+        1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+        2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+        2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+}
 
 .contacts-wrapper {
     display: flex;
