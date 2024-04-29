@@ -1,3 +1,28 @@
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 4px 4px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #2e2f42;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: transform 0.5s, box-shadow 700ms linear;
+  width: 30px;
+  height: 30px;
+}
+
+#scrollToTopBtn:hover,
+#scrollToTopBtn:focus {
+  box-shadow: 0 0 15px #ed3b44;
+}
+
+#scrollToTopBtn.visible {
+  opacity: 1;
+}
+
 /* =============================Mobile_Styles============================= */
 .header-container {
   display: flex;
@@ -168,6 +193,15 @@
 /* =============================Tablet_Styles============================= */
 
 @media screen and (min-width: 768px) {
+  #scrollToTopBtn {
+    padding: 16px 17px;
+
+    width: 50px;
+    height: 50px;
+  }
+  .button-arrow {
+    transform: scale(1.5);
+  }
   .modal-content-list {
     display: inline;
   }
