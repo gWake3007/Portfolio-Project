@@ -35,9 +35,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .benefits-title {
-    /* margin-bottom: 0px; */
-  }
   .content-part {
     max-width: 680px;
   }
