@@ -1,3 +1,7 @@
+.container {
+  margin-bottom: 64px;
+}
+
 .list__item-title .circle {
   display: flex;
   position: relative;
@@ -9,6 +13,10 @@
   margin-left: 44px;
   flex-shrink: 0;
   display: block;
+}
+
+.list__item-title .circle:hover {
+  box-shadow: 0 0 15px #ed3b44;
 }
 
 .faq-list {
@@ -88,6 +96,10 @@
   .list__item .list__item-text {
     margin-top: 26px;
   }
+
+  .container {
+    margin-bottom: 96px;
+  }
 }
 
 /*=========  DESKTOP  =========*/
@@ -121,5 +133,9 @@
   .list__item:nth-child(5) {
     border-top: none;
     border-bottom: none;
+  }
+
+  .container {
+    margin-bottom: 164px;
   }
 }
