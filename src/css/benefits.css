@@ -72,6 +72,11 @@
   border-radius: 20px;
   background: rgb(36, 37, 39);
   padding: 24px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.benefits-item:hover {
+  transform: scale(1.2);
 }
 
 @media screen and (min-width: 1440px) {
