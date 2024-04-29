@@ -4,7 +4,6 @@
     url(../img/hero/hero_mobile_1x.png) 1x,
     url(../img/hero/hero_mobile_2x.png) 2x
   );
-  background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -114,5 +113,23 @@
     margin: 0 auto;
     margin-bottom: 212px;
   }
+}
 
+@media screen and (min-width: 330px) {
+  .hero {
+    background-position: left;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .hero-social-link-item .hero-link-text {
+    font-size: 12px;
+    line-height: 1.21;
+  }
+  .hero-social-links {
+    gap: 2px;
+  }
+  .hero-title {
+    font-size: 44px;
+  }
 }
