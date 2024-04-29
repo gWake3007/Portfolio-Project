@@ -12,7 +12,7 @@ function toggleAnimation(isVisible) {
   } else {
     marqueeInner.classList.remove('animate-marquee');
     }
-    console.log(marqueeInner, "hello!!!");
+    // console.log(marqueeInner, "hello!!!");
 }
 
 // Налаштування Intersection Observer
