@@ -6,10 +6,12 @@ const modalContent = document.querySelector('.modal-content');
 
 btn.onclick = function () {
   modal.style.display = 'block';
+  modal.style.transform = 'translateX(0%)';
 };
 
 span.onclick = function () {
-  modal.style.display = 'none';
+  // modal.style.display = 'none';
+  modal.style.transform = 'translateX(100%)';
 };
 
 document.onclick = function (e) {
@@ -107,3 +109,19 @@ anchors.forEach(anchor => {
   });
 });
 //* ========================== Scrolling_(END)=====================================
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+scrollToTopBtn.addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
+
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.classList.add('visible');
+  } else {
+    scrollToTopBtn.classList.remove('visible');
+  }
+});
