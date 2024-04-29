@@ -1,4 +1,6 @@
 import axios from 'axios';
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
@@ -74,13 +76,17 @@ updateButtons(swiper, btnPrev, btnNext);
 fetchReviews()
 
 async function fetchReviews() {
- await axios.get('/reviews')
+ await axios.get('/review')
   .then((response) => {
     reviewsList.insertAdjacentHTML('beforeend', markupReviews(response.data));
     swiper.update();
     document.querySelectorAll('.reviews-text').forEach(el => { typeWriter(el, 30); });
    })
-  .catch((error) => {
+   .catch((error) => {
+     iziToast.error({
+       message: `We're sorry, but something went wrong: Reviews not found`,
+       position: "topRight",
+     });
     const errorMessage = document.createElement('div');
     errorMessage.textContent = 'Error: Reviews not found';
     errorMessage.style.color = 'red';
