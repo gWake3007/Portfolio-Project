@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -9,9 +9,11 @@ axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 
 
 const reviewsList = document.querySelector('.reviews-list');
+const btnNext = document.querySelector('.reviews-next-btn');
+const btnPrev = document.querySelector('.reviews-prev-btn');
 
 const swiper = new Swiper('.reviews-slider', {
-  modules: [Navigation, Pagination],
+  modules: [Navigation, Keyboard, Mousewheel],
   speed: 1000,
 
   navigation: {
@@ -42,12 +44,42 @@ const swiper = new Swiper('.reviews-slider', {
   },
 });
 
+function updateButtons(swiper, btnPrev, btnNext) {
 
-axios.get('/reviews')
+  if (swiper.isBeginning) {
+    btnPrev.disabled = true;
+  } else {
+    btnPrev.disabled = false;
+  }
+
+  if (swiper.isEnd) {
+    btnNext.disabled = true;
+  } else {
+    btnNext.disabled = false;
+  }
+}
+
+btnPrev.addEventListener('click', () => {
+  updateButtons(swiper, btnPrev, btnNext);
+});
+
+
+btnNext.addEventListener('click', () => {
+  updateButtons(swiper, btnPrev, btnNext);
+});
+
+
+updateButtons(swiper, btnPrev, btnNext);
+
+fetchReviews()
+
+async function fetchReviews() {
+ await axios.get('/reviews')
   .then((response) => {
     reviewsList.insertAdjacentHTML('beforeend', markupReviews(response.data));
     swiper.update();
-  })
+    document.querySelectorAll('.reviews-text').forEach(el => { typeWriter(el, 30); });
+   })
   .catch((error) => {
     const errorMessage = document.createElement('div');
     errorMessage.textContent = 'Error: Reviews not found';
@@ -55,7 +87,7 @@ axios.get('/reviews')
     reviewsList.innerHTML = '';
     reviewsList.appendChild(errorMessage);
   });
-
+}
 
 
 function markupReviews(arr) {
@@ -65,9 +97,36 @@ function markupReviews(arr) {
         <li class="reviews-card">
           <img class="reviews-img" src="${avatar_url}" alt="${author}">
             <h4 class="reviews-name">${author}</h4>
-            <p class="reviews-text">${review}</p>
+            <p class="typewriter reviews-text">${review}</p>
         </li>
       </div >`
     )
     .join("");
+}
+
+
+function typeWriter(element, speed) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+  if (element.dataset.typingStarted) return;
+  element.dataset.typingStarted = 'true';
+
+  const text = element.innerHTML;
+  let i = 0;
+  element.innerHTML = '';
+
+  function typing() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, speed);
+    }
+  }
+  typing();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(element);
 }
