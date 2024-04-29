@@ -110,7 +110,8 @@ border-bottom-right-radius: 24px;
 }
 
 .projects-button {
-    border: 1px solid rgba(250, 250, 250, 0.2);
+    /* border: 1px solid rgba(250, 250, 250, 0.2); */
+    border: 1px solid #ffffff;
     border-radius: 60px;
     padding: 14px;
     background-color: transparent;
@@ -127,7 +128,8 @@ border-bottom-right-radius: 24px;
 }
 
 .button-arrow {
-    stroke: #3B3B3B;
+    stroke: #ffffff;
+    /* stroke: #3B3B3B; */
     transition: 0.5s;
 }
 
@@ -137,6 +139,15 @@ border-bottom-right-radius: 24px;
     stroke: #ffffff;
 }
 
+
+ .projects-button:disabled {
+    cursor: defolt;
+    border: 1px solid #fafafa33 ;
+}
+ .projects-button:disabled .button-arrow {
+    stroke: #fafafa33 ;
+    fill: #fafafa33;
+ }
 
 
                 /* Mobile styles */
