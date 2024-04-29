@@ -24,11 +24,14 @@
 .content {
   position: relative;
   height: 508px;
-  background-image: image-set(
-    url(../img/covers/png/covers_png_1x.png) 1x,
-    url(../img/covers/png/covers_png_2x.png) 2x
-  );
+  background-image: url(../img/covers/png/covers_png_1x.png);
   overflow: hidden;
+}
+@media only screen and (min-resolution: 144dpi),
+  only screen and (min-resolution: 1.5dppx) {
+  .content {
+    background-image: url(../img/covers/png/covers_png_2x.png);
+  }
 }
 .marquee {
   position: absolute;
