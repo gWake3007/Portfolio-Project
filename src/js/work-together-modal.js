@@ -1,8 +1,8 @@
 import axios from 'axios';
-// const axios = require('axios').default;
-
 import * as basicLightbox from 'basiclightbox';
+import Notiflix from 'notiflix';
 
+// const axios = require('axios').default;
 // document.getElementsById("footer").addEventListener("submit", async function (event) {
 //   event.preventDefault();
 
@@ -41,7 +41,7 @@ const form = document.querySelector('.footer-form');
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 
 async function postRequests(email, comment) {
-  return await axios.post('/requests', { email: email, comment: comment });
+  return await axios.post('/requests/', { email: email, comment: comment });
 }
 
 form.addEventListener('submit', submitForm);
@@ -67,25 +67,22 @@ function submitForm(event) {
   </div>
   </div>`);
       instance.show();
+      form.addEventListener("keydown", (event) => {
+        if(event.keyCode === 27) {
+          instance.close();
+        }
+      });
       closeModal(instance);
       userEmail.value = '';
       userComments.value = '';
     })
-    .catch(err => {
-      // И ТУТ.
-      console.log(err);
+    .catch((err) => {
+      alert(err);
+      // Notiflix.Notify.failure('Qui timide rogat docet negare');
+      console.log("gg");
     });
 }
 
 function closeModal(instance) {
   instance.element().querySelector(".modal-button").onclick = () => instance.close();
 }
-
-// window.addEventListener("keydown", closeModalOnEsc);
-// function closeModalOnEsc(event) {
-//   if(event.keyCode === 27) {
-//     console.log("gg");
-//     instance.close();
-//   }
-//   window.removeEventListener("keydown", closeModalOnEsc);
-// }
