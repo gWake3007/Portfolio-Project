@@ -1,6 +1,6 @@
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 
 // const axios = require('axios').default;
 // document.getElementsById("footer").addEventListener("submit", async function (event) {
