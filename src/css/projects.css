@@ -45,8 +45,14 @@ box-sizing: border-box;
 border: 1px solid rgba(28, 29, 32, 0.2);
 border-radius: 60px;
 padding: 13px 18px;
-
+cursor: pointer;
+transition: border-color 250ms;
 }
+
+.technologies-item:hover,
+.technologies-item:focus {
+    border: 1px solid  #e0373f;
+ }
 
 .projects-description {
 max-width: 279px;

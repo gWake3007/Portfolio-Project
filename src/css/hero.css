@@ -34,6 +34,12 @@
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 60px;
+  transition: border-color 250ms;
+  cursor: pointer;
+}
+.hero-social-link-item:hover,
+.hero-social-link-item:focus {
+    border-color: #fafafa;
 }
 
 .hero-social-link-item.first {
