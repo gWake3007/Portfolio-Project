@@ -40,6 +40,13 @@ const menu = document.querySelector('.menu');
 const listItems = document.querySelectorAll('.menu-list');
 const menuList = document.querySelector('.hidden-menu');
 
+// menu.addEventListener('mouseenter', function () {
+//   menuList.classList.add('visible-menu');
+// });
+// menu.addEventListener('mouseleave', function () {
+//   menuList.classList.remove('visible-menu');
+// });
+
 menu.addEventListener('click', openClose);
 
 function openClose(e) {
