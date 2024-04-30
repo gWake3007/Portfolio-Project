@@ -124,7 +124,6 @@ input:-webkit-autofill:active {
   cursor: pointer;
 }
 
-
 .footer-btn:hover {
   background: rgb(224, 55, 63);
 }
@@ -162,28 +161,28 @@ input:-webkit-autofill:active {
 }
 
 .container-fot {
-    background-image: url(../img/work_together/mobile_1x.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
+  background-image: url(../img/work_together/mobile_1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .container-fot {
-      background-image: url(../img/work_together/mobile_2x.png);
-    }
+  .container-fot {
+    background-image: url(../img/work_together/mobile_2x.png);
   }
+}
 
 @media screen and (min-width: 768px) {
+  .container-fot {
+    background-image: url(../img/work_together/tablet_1x.png);
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .container-fot {
-        background-image: url(../img/work_together/tablet_1x.png);
+      background-image: url(../img/work_together/tablet_2x.png);
     }
-    
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        .container-fot {
-          background-image: url(../img/work_together/tablet_2x.png);
-        }
-      }
+  }
   .email-btn,
   .phone-btn {
     padding: 18px 32px 18px 32px;
@@ -242,15 +241,15 @@ input:-webkit-autofill:active {
 }
 
 @media screen and (min-width: 1440px) {
+  .container-fot {
+    background-image: url(../img/work_together/desctop_1x.png);
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .container-fot {
-        background-image: url(../img/work_together/desctop_1x.png);
+      background-image: url(../img/work_together/desctop_2x.png);
     }
-    
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        .container-fot {
-          background-image: url(../img/work_together/desctop_2x.png);
-        }
-      }
+  }
 }
 
 /*modal*/
@@ -280,6 +279,7 @@ input:-webkit-autofill:active {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms linear;
   padding: 64px 32px 64px 32px;
+  pointer-events: auto;
 }
 .modal-button {
   display: flex;
@@ -311,7 +311,7 @@ input:-webkit-autofill:active {
   letter-spacing: -0.02em;
   text-align: center;
   color: #fafafa;
-  margin-bottom: 20px;
+  padding-bottom: 8px;
 }
 .modal-text {
   font-size: 16px;
@@ -320,4 +320,25 @@ input:-webkit-autofill:active {
   letter-spacing: -0.02em;
   text-align: center;
   color: #fafafa99;
+}
+
+@media screen and (max-width: 374px) {
+    .modal-window {
+        width: 300px;
+    }
+  .modal-title {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .modal-text {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+    .modal-window {
+        width: 493px;
+        padding: 64px;
+    }
 }
