@@ -16,6 +16,7 @@ body.mobMenuOpen {
   transition: transform 0.5s, box-shadow 700ms linear;
   width: 30px;
   height: 30px;
+  z-index: 9999;
 }
 
 #scrollToTopBtn:hover,
@@ -81,6 +82,13 @@ body.mobMenuOpen {
   text-decoration-line: underline;
 }
 
+.modal-content-list-item-link:hover,
+.modal-content-list-item-link:focus,
+.modal-content-list-item-link:active {
+  color: chocolate;
+  border: none;
+}
+
 .logo-flex {
   display: flex;
   gap: 8px;
@@ -119,6 +127,15 @@ body.mobMenuOpen {
   top: 673px;
   display: flex;
   align-items: center;
+  border: none;
+}
+
+.link-order:hover,
+.link-order:focus,
+.link-order:active {
+  box-shadow: 0 0 15px rgb(212, 187, 187), 1px 2px 4px 0px rgb(212, 187, 187),
+    2px 4px 8px 0px rgb(212, 187, 187), 2px 4px 16px 0px rgb(212, 187, 187);
+  color: chocolate;
   border: none;
 }
 
@@ -201,7 +218,7 @@ body.mobMenuOpen {
 
 @media screen and (min-width: 768px) {
   #scrollToTopBtn {
-    padding: 16px 17px;
+    padding: 17px 18px;
 
     width: 50px;
     height: 50px;
@@ -220,7 +237,7 @@ body.mobMenuOpen {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     color: rgb(250, 250, 250);
     font-size: 16px;
     font-weight: 500;
@@ -239,7 +256,8 @@ body.mobMenuOpen {
     left: 0;
   }
   .menu:hover,
-  .menu:focus {
+  .menu:focus,
+  .menu:active {
     color: chocolate;
     border: none;
   }
@@ -331,10 +349,8 @@ body.mobMenuOpen {
 
   .link-order-to-footer:hover,
   .link-order-to-footer:focus {
-    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
-      1px 2px 4px 0px rgba(0, 255, 255, 0.7),
-      2px 4px 8px 0px rgba(0, 255, 255, 0.7),
-      2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 15px rgb(212, 187, 187), 1px 2px 4px 0px rgb(212, 187, 187),
+      2px 4px 8px 0px rgb(212, 187, 187), 2px 4px 16px 0px rgb(212, 187, 187);
     color: chocolate;
     border: none;
   }

@@ -65,12 +65,14 @@ function submitForm(event) {
                      <div class="modal-window">
       <button class="modal-button" type="button" aria-label="close-button">
           <svg class="modal-btn-icon" width="22" height="22">
-                  <use href="../img/icons/sprites.svg#closeX"></use>
+                  <use href="./img/icons/sprites.svg#closeX"></use>
           </svg>
       </button>
+      <div class="modal-all-text">
       <h3 class="modal-title">${resp.data.title}</h3>
       <p class="modal-text">${resp.data.message}
       </p>
+      </div>
   </div>
   </div>`);
       instance.show();
@@ -105,7 +107,6 @@ function submitForm(event) {
       userComments.value = '';
     })
     .catch(err => {
-      console.log(err);
       iziToast.error({
         message: `Unable to send your data. Please correct them and try again.`,
         position: 'topRight',
