@@ -16,7 +16,8 @@ span.onclick = function () {
 
 document.onclick = function (e) {
   if (e.target === modal) {
-    modal.style.display = 'none';
+    // modal.style.display = 'none';
+    modal.style.transform = 'translateX(100%)';
   }
 };
 
@@ -24,7 +25,8 @@ document.addEventListener('keydown', clickEscapeModal);
 
 function clickEscapeModal(e) {
   if (e.key === 'Escape' || e.key === 'Esc') {
-    modal.style.display = 'none';
+    // modal.style.display = 'none';
+    modal.style.transform = 'translateX(100%)';
   }
 }
 
@@ -32,7 +34,8 @@ modalContent.addEventListener('click', exitModal);
 
 function exitModal(e) {
   if (e.currentTarget) {
-    modal.style.display = 'none';
+    // modal.style.display = 'none';
+    modal.style.transform = 'translateX(100%)';
   }
 }
 //* ==========================Modal-Window_(END)=====================================
