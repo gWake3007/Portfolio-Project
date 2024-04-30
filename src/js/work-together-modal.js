@@ -120,3 +120,15 @@ function submitForm(event) {
       reviewsList.appendChild(errorMessage);
     });
 }
+
+
+const emailBtn = document.querySelector('.email-btn');
+const phoneBtn = document.querySelector('.phone-btn');
+
+emailBtn.addEventListener('click', () => {
+  window.location.href = 'mailto:lloydjefferson@gmail.com';
+});
+
+phoneBtn.addEventListener('click', () => {
+  window.location.href = 'tel:+380111111111';
+});
