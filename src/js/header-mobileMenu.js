@@ -3,15 +3,18 @@ const modal = document.querySelector('#modalWindow');
 const btn = document.querySelector('#burgerBtn');
 const span = document.querySelector('.close');
 const modalContent = document.querySelector('.modal-content');
+const body = document.body;
 
 btn.onclick = function () {
   modal.style.display = 'block';
   modal.style.transform = 'translateX(0%)';
+  body.classList.add("mobMenuOpen");
 };
 
 span.onclick = function () {
   // modal.style.display = 'none';
   modal.style.transform = 'translateX(100%)';
+  body.classList.remove("mobMenuOpen");
 };
 
 document.onclick = function (e) {
