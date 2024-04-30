@@ -20,7 +20,7 @@
   .container-benefits {
     display: flex;
     flex-direction: row;
-    gap: 390px;
+    justify-content: space-between;
   }
 }
 
@@ -77,6 +77,12 @@
 
 .benefits-item:hover {
   transform: scale(1.05);
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-item {
+    width: 344px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
