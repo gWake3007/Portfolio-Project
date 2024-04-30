@@ -140,14 +140,17 @@ input:-webkit-autofill:active {
 .contacts-wrapper {
   display: flex;
   gap: 4px;
+  
 }
 .email-btn:hover {
   border-color: #fafafa;
   box-shadow: 0 0 15px #ed3b44;
+  cursor: pointer;
 }
 .phone-btn:hover {
   border-color: #fafafa;
   box-shadow: 0 0 15px #ed3b44;
+  cursor: pointer;
 }
 
 .email-btn,
