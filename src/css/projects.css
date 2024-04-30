@@ -170,6 +170,11 @@ border-bottom-right-radius: 24px;
 
 
 @media screen and (min-width: 768px) {
+
+.projects-section {
+padding-bottom: 96px;
+
+}
   
 .proj-swiper-wrapper {
     margin-bottom: 64px;
@@ -216,6 +221,11 @@ height: 32px;
                 /* =========================DESCTOP========================== */
 
 @media screen and (min-width: 1440px) {
+.projects-section {
+padding-bottom: 164px;
+
+}
+
 .technologies-list {
     margin-bottom: 223px;
 }
