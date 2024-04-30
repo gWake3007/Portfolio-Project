@@ -9,7 +9,7 @@ import{A as S,S as w,N as E,K as q,M as O,P,a as b,i as T,b as C}from"./assets/v
                      <div class="modal-window">
       <button class="modal-button" type="button" aria-label="close-button">
           <svg class="modal-btn-icon" width="22" height="22">
-                  <use href="../img/icons/sprites.svg#closeX"></use>
+                  <use href="./img/icons/sprites.svg#closeX"></use>
           </svg>
       </button>
       <div class="modal-all-text">
@@ -18,5 +18,5 @@ import{A as S,S as w,N as E,K as q,M as O,P,a as b,i as T,b as C}from"./assets/v
       </p>
       </div>
   </div>
-  </div>`);s.show();const c=document.getElementById("modalW"),d=c.parentNode;l.classList.add("mobMenuOpen"),l.addEventListener("keydown",k);function k(L){L.keyCode===27&&(s.close(),d.classList.contains("basicLightbox__placeholder")&&(l.classList.remove("mobMenuOpen"),l.removeEventListener("keydown",k)))}l.addEventListener("click",L=>{L.target===c&&(s.close(),d.classList.contains("basicLightbox__placeholder")&&l.classList.remove("mobMenuOpen"))}),s.element().querySelector(".modal-button").onclick=()=>{s.close(),d.classList.contains("basicLightbox__placeholder")&&l.classList.remove("mobMenuOpen")},n.value="",i.value=""}).catch(o=>{console.log(o),T.error({message:"Unable to send your data. Please correct them and try again.",position:"topRight"});const s=document.createElement("div");s.textContent="Error: Reviews not found",s.style.color="red",s.style.border="1px solid #ed3b44",s.style.borderRadius="15px",s.style.padding="32px",reviewsList.innerHTML="",reviewsList.appendChild(s)})}
+  </div>`);s.show();const c=document.getElementById("modalW"),d=c.parentNode;l.classList.add("mobMenuOpen"),l.addEventListener("keydown",k);function k(L){L.keyCode===27&&(s.close(),d.classList.contains("basicLightbox__placeholder")&&(l.classList.remove("mobMenuOpen"),l.removeEventListener("keydown",k)))}l.addEventListener("click",L=>{L.target===c&&(s.close(),d.classList.contains("basicLightbox__placeholder")&&l.classList.remove("mobMenuOpen"))}),s.element().querySelector(".modal-button").onclick=()=>{s.close(),d.classList.contains("basicLightbox__placeholder")&&l.classList.remove("mobMenuOpen")},n.value="",i.value=""}).catch(o=>{T.error({message:"Unable to send your data. Please correct them and try again.",position:"topRight"});const s=document.createElement("div");s.textContent="Error: Reviews not found",s.style.color="red",s.style.border="1px solid #ed3b44",s.style.borderRadius="15px",s.style.padding="32px",reviewsList.innerHTML="",reviewsList.appendChild(s)})}
 //# sourceMappingURL=commonHelpers.js.map
