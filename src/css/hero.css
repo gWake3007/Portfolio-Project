@@ -5,6 +5,7 @@
     url(../img/hero/hero_mobile_1x.png) 1x,
     url(../img/hero/hero_mobile_2x.png) 2x
   ); */
+  padding-bottom: 32px;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -31,7 +32,6 @@
   flex-direction: row;
   justify-content: center;
   gap: 4px;
-  padding-bottom: 32px;
 }
 
 .hero-social-link-item {
