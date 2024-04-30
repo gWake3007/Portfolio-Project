@@ -133,3 +133,9 @@ emailBtn.addEventListener('click', () => {
 phoneBtn.addEventListener('click', () => {
   window.location.href = 'tel:+380111111111';
 });
+
+
+const closeButton = instance.element().querySelector('.modal-button');
+closeButton.addEventListener('click', () => {
+      instance.close();
+});
