@@ -37,6 +37,7 @@
 @media screen and (min-width: 1440px) {
   .content-part {
     max-width: 680px;
+    position: relative;
   }
 }
 
@@ -130,6 +131,7 @@
   .benefits-btn {
     margin-bottom: 64px;
     transition: 0.5s;
+    position: absolute;
   }
   .benefits-btn:hover,
   .benefits-btn:focus {
