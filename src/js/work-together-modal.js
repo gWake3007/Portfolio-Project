@@ -1,5 +1,7 @@
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 // Робота Кіріл
 
@@ -52,7 +54,6 @@ async function postRequests(email, comment) {
 
 form.addEventListener('submit', submitForm);
 
-
 function submitForm(event) {
   event.preventDefault();
   const form = event.target;
@@ -73,46 +74,49 @@ function submitForm(event) {
   </div>
   </div>`);
       instance.show();
-      const modal = document.getElementById("modalW");
+      const modal = document.getElementById('modalW');
       const modal1 = modal.parentNode;
-      body.classList.add("mobMenuOpen");
-      body.addEventListener("keydown", (event) => {
-        if(event.keyCode === 27) {
+      body.classList.add('mobMenuOpen');
+      body.addEventListener('keydown', escClose);
+      function escClose(event) {
+        if (event.keyCode === 27) {
           instance.close();
-          if(modal1.classList.contains("basicLightbox__placeholder")) {
-            body.classList.remove("mobMenuOpen");
-            console.log("gg");
+          if (modal1.classList.contains('basicLightbox__placeholder')) {
+            body.classList.remove('mobMenuOpen');
+            body.removeEventListener('keydown', escClose);
+          }
+        }
+      }
+      body.addEventListener('click', event => {
+        if (event.target === modal) {
+          instance.close();
+          if (modal1.classList.contains('basicLightbox__placeholder')) {
+            body.classList.remove('mobMenuOpen');
           }
         }
       });
-      body.addEventListener("click", (event) => {
-        if(event.target === modal) {
-          instance.close();
-          if(modal1.classList.contains("basicLightbox__placeholder")) {
-            body.classList.remove("mobMenuOpen");
-            console.log("gg");
-          }
-        }
-      });
-      instance.element().querySelector(".modal-button").onclick = () =>  {
-        instance.close()
-        if(modal1.classList.contains("basicLightbox__placeholder")) {
-          body.classList.remove("mobMenuOpen");
-          console.log("gg");
+      instance.element().querySelector('.modal-button').onclick = () => {
+        instance.close();
+        if (modal1.classList.contains('basicLightbox__placeholder')) {
+          body.classList.remove('mobMenuOpen');
         }
       };
       userEmail.value = '';
       userComments.value = '';
     })
-    .catch((err) => {
-      alert(err);
-      console.log("gg");
+    .catch(err => {
+      console.log(err);
+      iziToast.error({
+        message: `Unable to send your data. Please correct them and try again.`,
+        position: 'topRight',
+      });
+      const errorMessage = document.createElement('div');
+      errorMessage.textContent = 'Error: Reviews not found';
+      errorMessage.style.color = 'red';
+      errorMessage.style.border = '1px solid #ed3b44';
+      errorMessage.style.borderRadius = '15px';
+      errorMessage.style.padding = '32px';
+      reviewsList.innerHTML = '';
+      reviewsList.appendChild(errorMessage);
     });
 }
-
-// function closeModal(instance) {
-//   instance.element().querySelector(".modal-button").onclick = () => instance.close();
-//   if(modal1.classList.contains("basicLightbox__placeholder")) {
-//     body.classList.remove("mobMenuOpen");
-//   }
-// }
