@@ -100,8 +100,8 @@
 
 .reviews-prev-btn:hover,
 .reviews-next-btn:hover,
-.reviews-prev-btn:active,
-.reviews-next-btn:active {
+.reviews-prev-btn:focus,
+.reviews-next-btn:focus {
   border: 1px solid rgba(250, 250, 250, 0.5);
   box-shadow: 0 0 15px #ed3b44;
 }
