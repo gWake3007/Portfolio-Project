@@ -120,6 +120,9 @@ anchors.forEach(anchor => {
       block: 'start',
     });
     body.classList.remove('mobMenuOpen');
+    setTimeout(() => {
+      anchor.blur();
+    }, 1000);
   });
 });
 //* ========================== Scrolling_(END)=====================================
