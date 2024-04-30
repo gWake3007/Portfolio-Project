@@ -341,4 +341,7 @@ input:-webkit-autofill:active {
         width: 493px;
         padding: 64px;
     }
+    .modal-title {
+        letter-spacing: -0.06em;
+    }
 }
