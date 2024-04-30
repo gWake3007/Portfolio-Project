@@ -280,6 +280,13 @@ body.mobMenuOpen {
     line-height: 19px;
     letter-spacing: -0.02em;
   }
+  .menu-list:hover,
+  .menu-list:focus,
+  .menu-list:active {
+    color: chocolate;
+    border: none;
+    text-decoration: underline;
+  }
 
   .link-order {
     display: inline;
