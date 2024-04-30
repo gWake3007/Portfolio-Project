@@ -144,7 +144,7 @@ border-bottom-right-radius: 24px;
 
 
  .projects-button:disabled {
-    cursor: defolt;
+    cursor: default;
     border: 1px solid #fafafa33 ;
     box-shadow: none;
 }
