@@ -8,24 +8,22 @@ const body = document.body;
 btn.onclick = function () {
   modal.style.display = 'block';
   modal.style.transform = 'translateX(0%)';
-  body.classList.add("mobMenuOpen");
+  body.classList.add('mobMenuOpen');
 };
 
 span.onclick = function () {
   // modal.style.display = 'none';
   modal.style.transform = 'translateX(100%)';
-  body.classList.remove("mobMenuOpen");
+  body.classList.remove('mobMenuOpen');
 };
 
 document.onclick = function (e) {
   if (e.target === modal) {
-
     // modal.style.display = 'none';
     modal.style.transform = 'translateX(100%)';
 
-body.classList.remove("mobMenuOpen");
+    body.classList.remove('mobMenuOpen');
     modal.style.display = 'none';
-
   }
 };
 
@@ -33,13 +31,11 @@ document.addEventListener('keydown', clickEscapeModal);
 
 function clickEscapeModal(e) {
   if (e.key === 'Escape' || e.key === 'Esc') {
-
     // modal.style.display = 'none';
     modal.style.transform = 'translateX(100%)';
 
     modal.style.display = 'none';
-    body.classList.remove("mobMenuOpen");
-
+    body.classList.remove('mobMenuOpen');
   }
 }
 
@@ -49,7 +45,7 @@ function exitModal(e) {
   if (e.currentTarget) {
     // modal.style.display = 'none';
     modal.style.transform = 'translateX(100%)';
-    body.classList.remove("mobMenuOpen");
+    body.classList.remove('mobMenuOpen');
   }
 }
 //* ==========================Modal-Window_(END)=====================================
@@ -81,7 +77,7 @@ menuList.addEventListener('mouseleave', function (event) {
   }
 });
 
-// menu.addEventListener('click', openClose);
+menu.addEventListener('click', openClose);
 
 function openClose(e) {
   if (menuList.classList.contains('hidden-menu')) {
@@ -123,7 +119,7 @@ anchors.forEach(anchor => {
       behavior: 'smooth',
       block: 'start',
     });
-    body.classList.remove("mobMenuOpen");
+    body.classList.remove('mobMenuOpen');
   });
 });
 //* ========================== Scrolling_(END)=====================================
