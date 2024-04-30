@@ -119,6 +119,8 @@ function markupReviews(arr) {
 
 
 function typeWriter(element, speed) {
+  element.style.opacity = 0;
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -136,6 +138,10 @@ function typeWriter(element, speed) {
             setTimeout(typing, speed);
           }
         }
+
+        entry.target.style.transition = `opacity ${speed / 1000}s ease`;
+        entry.target.style.opacity = 1;
+
         typing();
       }
     });
