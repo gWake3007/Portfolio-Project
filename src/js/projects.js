@@ -10,8 +10,16 @@ import 'swiper/css/pagination';
 
 document.addEventListener('DOMContentLoaded', function () {
   const projSwiper = new Swiper('.projects-swiper', {
+    modules: [Navigation, Pagination],
     slidesPerView: 1,
     spaceBetween: 20,
+    grabCursor: true,
+    allowTouchMove: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    }
+    
   });
 
   const buttonProjPrev = document.querySelector('.proj-left-button');
