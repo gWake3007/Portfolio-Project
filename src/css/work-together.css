@@ -127,6 +127,7 @@ input:-webkit-autofill:active {
 
 .footer-btn:hover {
   background: rgb(224, 55, 63);
+  transition: 250ms linear;
 }
 .footer-btn:hover,
 .footer-btn:focus {
@@ -159,6 +160,7 @@ input:-webkit-autofill:active {
   color: rgb(250, 250, 250);
   font-size: 14px;
   line-height: 1.21;
+  transition: 250ms linear;
 }
 
 .container-fot {
