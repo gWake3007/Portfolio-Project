@@ -39,6 +39,9 @@ import * as basicLightbox from 'basiclightbox';
 
 // Робота Кіріл
 
+// body.classList.remove("mobMenuOpen");
+
+const body = document.body;
 const form = document.querySelector('.footer-form');
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
@@ -70,12 +73,34 @@ function submitForm(event) {
   </div>
   </div>`);
       instance.show();
-      form.addEventListener("keydown", (event) => {
+      const modal = document.getElementById("modalW");
+      const modal1 = modal.parentNode;
+      body.classList.add("mobMenuOpen");
+      body.addEventListener("keydown", (event) => {
         if(event.keyCode === 27) {
           instance.close();
+          if(modal1.classList.contains("basicLightbox__placeholder")) {
+            body.classList.remove("mobMenuOpen");
+            console.log("gg");
+          }
         }
       });
-      closeModal(instance);
+      body.addEventListener("click", (event) => {
+        if(event.target === modal) {
+          instance.close();
+          if(modal1.classList.contains("basicLightbox__placeholder")) {
+            body.classList.remove("mobMenuOpen");
+            console.log("gg");
+          }
+        }
+      });
+      instance.element().querySelector(".modal-button").onclick = () =>  {
+        instance.close()
+        if(modal1.classList.contains("basicLightbox__placeholder")) {
+          body.classList.remove("mobMenuOpen");
+          console.log("gg");
+        }
+      };
       userEmail.value = '';
       userComments.value = '';
     })
@@ -85,6 +110,9 @@ function submitForm(event) {
     });
 }
 
-function closeModal(instance) {
-  instance.element().querySelector(".modal-button").onclick = () => instance.close();
-}
+// function closeModal(instance) {
+//   instance.element().querySelector(".modal-button").onclick = () => instance.close();
+//   if(modal1.classList.contains("basicLightbox__placeholder")) {
+//     body.classList.remove("mobMenuOpen");
+//   }
+// }
