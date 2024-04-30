@@ -44,6 +44,10 @@ const swiper = new Swiper('.reviews-slider', {
     enabled: true,
     onlyInViewport: true,
   },
+
+  mousewheel: {
+    invert: false,
+  },
 });
 
 function updateButtons(swiper, btnPrev, btnNext) {
