@@ -68,7 +68,7 @@
 }
 
 .is-active .list__item-icon {
-  transform: rotate(180deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 
 .list__item-icon {
