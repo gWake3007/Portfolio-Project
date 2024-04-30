@@ -130,6 +130,15 @@ body.mobMenuOpen {
   border: none;
 }
 
+.link-order:hover,
+.link-order:focus,
+.link-order:active {
+  box-shadow: 0 0 15px rgb(212, 187, 187), 1px 2px 4px 0px rgb(212, 187, 187),
+    2px 4px 8px 0px rgb(212, 187, 187), 2px 4px 16px 0px rgb(212, 187, 187);
+  color: chocolate;
+  border: none;
+}
+
 .nav-link-js {
   display: none;
 }
@@ -340,10 +349,8 @@ body.mobMenuOpen {
 
   .link-order-to-footer:hover,
   .link-order-to-footer:focus {
-    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
-      1px 2px 4px 0px rgba(0, 255, 255, 0.7),
-      2px 4px 8px 0px rgba(0, 255, 255, 0.7),
-      2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 15px rgb(212, 187, 187), 1px 2px 4px 0px rgb(212, 187, 187),
+      2px 4px 8px 0px rgb(212, 187, 187), 2px 4px 16px 0px rgb(212, 187, 187);
     color: chocolate;
     border: none;
   }
