@@ -49,6 +49,7 @@ function exitModal(e) {
   if (e.currentTarget) {
     // modal.style.display = 'none';
     modal.style.transform = 'translateX(100%)';
+    body.classList.remove("mobMenuOpen");
   }
 }
 //* ==========================Modal-Window_(END)=====================================
