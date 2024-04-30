@@ -1,6 +1,9 @@
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
-// import Notiflix from 'notiflix';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
+// Робота Кіріл
 
 // const axios = require('axios').default;
 // document.getElementsById("footer").addEventListener("submit", async function (event) {
@@ -36,6 +39,11 @@ import * as basicLightbox from 'basiclightbox';
 //   }
 // });
 
+// Робота Кіріл
+
+// body.classList.remove("mobMenuOpen");
+
+const body = document.body;
 const form = document.querySelector('.footer-form');
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
@@ -45,7 +53,6 @@ async function postRequests(email, comment) {
 }
 
 form.addEventListener('submit', submitForm);
-
 
 function submitForm(event) {
   event.preventDefault();
@@ -58,7 +65,7 @@ function submitForm(event) {
                      <div class="modal-window">
       <button class="modal-button" type="button" aria-label="close-button">
           <svg class="modal-btn-icon" width="22" height="22">
-                  <use href="./img/icons/sprites.svg#closeX"></use>
+                  <use href="../img/icons/sprites.svg#closeX"></use>
           </svg>
       </button>
       <h3 class="modal-title">${resp.data.title}</h3>
@@ -67,22 +74,49 @@ function submitForm(event) {
   </div>
   </div>`);
       instance.show();
-      form.addEventListener("keydown", (event) => {
-        if(event.keyCode === 27) {
+      const modal = document.getElementById('modalW');
+      const modal1 = modal.parentNode;
+      body.classList.add('mobMenuOpen');
+      body.addEventListener('keydown', escClose);
+      function escClose(event) {
+        if (event.keyCode === 27) {
           instance.close();
+          if (modal1.classList.contains('basicLightbox__placeholder')) {
+            body.classList.remove('mobMenuOpen');
+            body.removeEventListener('keydown', escClose);
+          }
+        }
+      }
+      body.addEventListener('click', event => {
+        if (event.target === modal) {
+          instance.close();
+          if (modal1.classList.contains('basicLightbox__placeholder')) {
+            body.classList.remove('mobMenuOpen');
+          }
         }
       });
-      closeModal(instance);
+      instance.element().querySelector('.modal-button').onclick = () => {
+        instance.close();
+        if (modal1.classList.contains('basicLightbox__placeholder')) {
+          body.classList.remove('mobMenuOpen');
+        }
+      };
       userEmail.value = '';
       userComments.value = '';
     })
-    .catch((err) => {
-      alert(err);
-      // Notiflix.Notify.failure('Qui timide rogat docet negare');
-      console.log("gg");
+    .catch(err => {
+      console.log(err);
+      iziToast.error({
+        message: `Unable to send your data. Please correct them and try again.`,
+        position: 'topRight',
+      });
+      const errorMessage = document.createElement('div');
+      errorMessage.textContent = 'Error: Reviews not found';
+      errorMessage.style.color = 'red';
+      errorMessage.style.border = '1px solid #ed3b44';
+      errorMessage.style.borderRadius = '15px';
+      errorMessage.style.padding = '32px';
+      reviewsList.innerHTML = '';
+      reviewsList.appendChild(errorMessage);
     });
-}
-
-function closeModal(instance) {
-  instance.element().querySelector(".modal-button").onclick = () => instance.close();
 }

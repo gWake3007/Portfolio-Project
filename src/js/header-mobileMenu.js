@@ -3,18 +3,29 @@ const modal = document.querySelector('#modalWindow');
 const btn = document.querySelector('#burgerBtn');
 const span = document.querySelector('.close');
 const modalContent = document.querySelector('.modal-content');
+const body = document.body;
 
 btn.onclick = function () {
   modal.style.display = 'block';
+  modal.style.transform = 'translateX(0%)';
+  body.classList.add("mobMenuOpen");
 };
 
 span.onclick = function () {
-  modal.style.display = 'none';
+  // modal.style.display = 'none';
+  modal.style.transform = 'translateX(100%)';
+  body.classList.remove("mobMenuOpen");
 };
 
 document.onclick = function (e) {
   if (e.target === modal) {
+
+    // modal.style.display = 'none';
+    modal.style.transform = 'translateX(100%)';
+
+body.classList.remove("mobMenuOpen");
     modal.style.display = 'none';
+
   }
 };
 
@@ -22,7 +33,13 @@ document.addEventListener('keydown', clickEscapeModal);
 
 function clickEscapeModal(e) {
   if (e.key === 'Escape' || e.key === 'Esc') {
+
+    // modal.style.display = 'none';
+    modal.style.transform = 'translateX(100%)';
+
     modal.style.display = 'none';
+    body.classList.remove("mobMenuOpen");
+
   }
 }
 
@@ -30,7 +47,9 @@ modalContent.addEventListener('click', exitModal);
 
 function exitModal(e) {
   if (e.currentTarget) {
-    modal.style.display = 'none';
+    // modal.style.display = 'none';
+    modal.style.transform = 'translateX(100%)';
+    body.classList.remove("mobMenuOpen");
   }
 }
 //* ==========================Modal-Window_(END)=====================================
@@ -104,6 +123,23 @@ anchors.forEach(anchor => {
       behavior: 'smooth',
       block: 'start',
     });
+    body.classList.remove("mobMenuOpen");
   });
 });
 //* ========================== Scrolling_(END)=====================================
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+scrollToTopBtn.addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
+
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.classList.add('visible');
+  } else {
+    scrollToTopBtn.classList.remove('visible');
+  }
+});

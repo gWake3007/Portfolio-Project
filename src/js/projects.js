@@ -10,8 +10,17 @@ import 'swiper/css/pagination';
 
 document.addEventListener('DOMContentLoaded', function () {
   const projSwiper = new Swiper('.projects-swiper', {
+    modules: [Navigation, Pagination],
     slidesPerView: 1,
     spaceBetween: 20,
+    grabCursor: true,
+    allowTouchMove: true,
+
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    
   });
 
   const buttonProjPrev = document.querySelector('.proj-left-button');
@@ -55,36 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  const projSwiper = new Swiper('.projects-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-  });
-
-  const buttonProjPrev = document.querySelector('.proj-left-button');
-  
-  buttonProjPrev.addEventListener('click', () => {
-    projSwiper.slidePrev(); 
-  });
-
- const buttonProjNext = document.querySelector('.proj-right-button');
-
-  buttonProjNext.addEventListener('click', () => {
-    projSwiper.slideNext(); 
-  });
-});
 
 
 

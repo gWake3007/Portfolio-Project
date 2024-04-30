@@ -76,23 +76,26 @@ updateButtons(swiper, btnPrev, btnNext);
 fetchReviews()
 
 async function fetchReviews() {
- await axios.get('/review')
-  .then((response) => {
-    reviewsList.insertAdjacentHTML('beforeend', markupReviews(response.data));
-    swiper.update();
-    document.querySelectorAll('.reviews-text').forEach(el => { typeWriter(el, 30); });
-   })
-   .catch((error) => {
-     iziToast.error({
-       message: `We're sorry, but something went wrong: Reviews not found`,
-       position: "topRight",
-     });
-    const errorMessage = document.createElement('div');
-    errorMessage.textContent = 'Error: Reviews not found';
-    errorMessage.style.color = 'red';
-    reviewsList.innerHTML = '';
-    reviewsList.appendChild(errorMessage);
-  });
+  await axios.get('/reviews')
+    .then((response) => {
+      reviewsList.insertAdjacentHTML('beforeend', markupReviews(response.data));
+      swiper.update();
+      document.querySelectorAll('.reviews-text').forEach(el => { typeWriter(el, 30); });
+    })
+    .catch((error) => {
+      iziToast.error({
+        message: `We're sorry, but something went wrong: Reviews not found`,
+        position: "topRight",
+      });
+      const errorMessage = document.createElement('div');
+      errorMessage.textContent = 'Error: Reviews not found';
+      errorMessage.style.color = 'red';
+      errorMessage.style.border = '1px solid #ed3b44';
+      errorMessage.style.borderRadius = '15px'
+      errorMessage.style.padding = '32px';
+      reviewsList.innerHTML = '';
+      reviewsList.appendChild(errorMessage);
+    });
 }
 
 
@@ -115,21 +118,21 @@ function typeWriter(element, speed) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-  if (element.dataset.typingStarted) return;
-  element.dataset.typingStarted = 'true';
+        if (element.dataset.typingStarted) return;
+        element.dataset.typingStarted = 'true';
 
-  const text = element.innerHTML;
-  let i = 0;
-  element.innerHTML = '';
+        const text = element.innerHTML;
+        let i = 0;
+        element.innerHTML = '';
 
-  function typing() {
-    if (i < text.length) {
-      element.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typing, speed);
-    }
-  }
-  typing();
+        function typing() {
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+          }
+        }
+        typing();
       }
     });
   }, { threshold: 0.5 });

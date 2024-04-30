@@ -61,6 +61,12 @@
   justify-content: center;
   align-content: center;
   gap: 12px;
+  padding-bottom: 12px;
+}
+@media screen and (min-width: 768px) {
+  .reviews-btn-wrapper {
+    gap: 20px;
+  }
 }
 
 .reviews-next-btn {
@@ -69,7 +75,7 @@
 
 .reviews-prev-btn,
 .reviews-next-btn {
-  border: 1px solid rgba(250, 250, 250, 0.2);
+  border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 60px;
   padding: 14px;
   background-color: transparent;
@@ -78,11 +84,13 @@
   align-content: center;
   transition: 0.5s;
   stroke: #fafafa;
+  width: 52px;
+  height: 52px;
 }
 @media screen and (min-width: 768px) {
   .reviews-prev-btn,
   .reviews-next-btn {
-    padding: 18px;
+    padding: 17px;
     width: 68px;
     height: 68px;
   }
@@ -97,7 +105,7 @@
 }
 
 .btn-arrow {
-  stroke: #3b3b3b;
+  stroke: #fafafa;
   transition: 0.5s;
 }
 @media screen and (min-width: 768px) {
@@ -106,15 +114,20 @@
     height: 32px;
   }
 }
-.btn-arrow:hover,
-.btn-arrow:focus {
+.reviews-prev-btn:hover .btn-arrow,
+.reviews-next-btn:hover .btn-arrow,
+.reviews-prev-btn:focus .btn-arrow,
+.reviews-next-btn:focus .btn-arrow {
   stroke: #ffffff;
 }
 
-.reviews-btn-disabled {
-  border: 1px solid #3b3b3b;
+.reviews-prev-btn:disabled,
+.reviews-next-btn:disabled {
+  cursor: default;
+  border: 1px solid #fafafa33;
+  box-shadow: none;
 }
-
-.btn-arrow-disabled {
-  stroke: #3b3b3b;
+.reviews-prev-btn:disabled .btn-arrow,
+.reviews-next-btn:disabled .btn-arrow {
+  stroke: #fafafa33;
 }
