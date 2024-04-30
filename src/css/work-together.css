@@ -26,7 +26,10 @@ textarea:-webkit-autofill::first-line {
 
 
 
-
+address {
+  font-style: normal;
+  /* Изменяем стиль шрифта на обычный */
+}
 .contacts-footer {
   margin-top: 64px;
 }
