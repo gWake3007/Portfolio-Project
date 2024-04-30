@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
-// import Notiflix from 'notiflix';
+
+// Робота Кіріл
 
 // const axios = require('axios').default;
 // document.getElementsById("footer").addEventListener("submit", async function (event) {
@@ -35,6 +36,8 @@ import * as basicLightbox from 'basiclightbox';
 //     alert("An error occurred. Please try again later.");
 //   }
 // });
+
+// Робота Кіріл
 
 const form = document.querySelector('.footer-form');
 
