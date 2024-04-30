@@ -12,7 +12,7 @@
 
 @media screen and (min-width: 1440px) {
   .section-benefits {
-    padding-bottom: 164px;
+    padding-bottom: 100px;
   }
 }
 
@@ -53,6 +53,7 @@
   .benefits-list {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 64px;
   }
 }
 
@@ -119,14 +120,15 @@
   border-radius: 60px;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .benefits-btn {
     margin-top: 64px;
   }
-}
+} */
 
 @media screen and (min-width: 1440px) {
   .benefits-btn {
+    margin-bottom: 64px;
     transition: 0.5s;
   }
   .benefits-btn:hover,
