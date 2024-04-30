@@ -135,9 +135,10 @@ phoneBtn.addEventListener('click', () => {
 });
 
 
+
+
 const closeButton = instance.element().querySelector('.modal-button');
 
 closeButton.addEventListener('click', () => {
-  
-      instance.close();
+        instance.close();
 });
