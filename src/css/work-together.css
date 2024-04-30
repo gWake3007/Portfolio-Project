@@ -274,12 +274,15 @@ input:-webkit-autofill:active {
   border: 1px solid #fafafa1a;
   background-color: #1c1d20;
   width: 343px;
-  min-height: 276px;
+  min-height: 246px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms linear;
-  padding: 64px 32px 64px 32px;
   pointer-events: auto;
+}
+
+.modal-all-text {
+  padding: 64px 32px 64px 32px;
 }
 .modal-button {
   display: flex;
@@ -323,9 +326,9 @@ input:-webkit-autofill:active {
 }
 
 @media screen and (max-width: 374px) {
-    .modal-window {
-        width: 300px;
-    }
+  .modal-window {
+    width: 300px;
+  }
   .modal-title {
     font-size: 18px;
     line-height: 1.2;
@@ -337,11 +340,13 @@ input:-webkit-autofill:active {
 }
 
 @media screen and (min-width: 768px) {
-    .modal-window {
-        width: 493px;
-        padding: 64px;
-    }
-    .modal-title {
-        letter-spacing: -0.06em;
-    }
+  .modal-window {
+    width: 493px;
+  }
+  .modal-title {
+    letter-spacing: -0.06em;
+  }
+  .modal-all-text {
+    padding: 64px;
+  }
 }
