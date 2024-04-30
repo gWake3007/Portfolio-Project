@@ -1,3 +1,7 @@
+body.mobMenuOpen {
+  overflow: hidden;
+}
+
 #scrollToTopBtn {
   position: fixed;
   bottom: 20px;

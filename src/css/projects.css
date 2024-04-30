@@ -96,11 +96,12 @@ border-bottom-right-radius: 24px;
 }
 
 .projects-buttons-wrap {
+  
     display: flex;
     justify-content: center;
     align-content: center;
     gap: 12px;
-    padding: 14px;
+    padding-bottom: 12px;
 
 }
 
@@ -120,11 +121,14 @@ border-bottom-right-radius: 24px;
     align-content: center;
     transition: 0.5s;
     fill: #fafafa;
+    
 }
 
 .projects-button:hover,
 .projects-button:focus {
     border: 1px solid rgba(250, 250, 250, 0.5);
+    box-shadow: 0 0 15px #ed3b44;
+    transition: 0.5s;
 }
 
 .button-arrow {
@@ -143,10 +147,12 @@ border-bottom-right-radius: 24px;
  .projects-button:disabled {
     cursor: defolt;
     border: 1px solid #fafafa33 ;
+    box-shadow: none;
 }
  .projects-button:disabled .button-arrow {
     stroke: #fafafa33 ;
     fill: #fafafa33;
+    box-shadow: none;
  }
 
 
@@ -187,21 +193,24 @@ margin-bottom: 32px;
 
 .proj-slider-wrap {
     margin-bottom: 64px;
+   
 }
 .proj-image-block {
     padding: 120px 45px;
 }
-
+.projects-buttons-wrap {
+    gap: 20px;
+}
 
 .projects-button {
 padding: 18px;
 }
-
-.button-arrow {
+/* Це я поправив Евгенія */
+/* .button-arrow {
 width: 32px;
 height: 32px;
 
-}
+} */
 }
                 /* =========================DESCTOP========================== */
 
@@ -227,6 +236,7 @@ height: 32px;
 border-top-left-radius: 24px;
 border-top-right-radius: 0px;
 border-bottom-left-radius: 24px;
+padding-right: 130px;
 }
 .projects-description {
 font-weight: 500;

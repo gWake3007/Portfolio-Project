@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
-// import Notiflix from 'notiflix';
+
+// Робота Кіріл
 
 // const axios = require('axios').default;
 // document.getElementsById("footer").addEventListener("submit", async function (event) {
@@ -36,6 +37,8 @@ import * as basicLightbox from 'basiclightbox';
 //   }
 // });
 
+// Робота Кіріл
+
 const form = document.querySelector('.footer-form');
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
@@ -58,7 +61,7 @@ function submitForm(event) {
                      <div class="modal-window">
       <button class="modal-button" type="button" aria-label="close-button">
           <svg class="modal-btn-icon" width="22" height="22">
-                  <use href="./img/icons/sprites.svg#closeX"></use>
+                  <use href="../img/icons/sprites.svg#closeX"></use>
           </svg>
       </button>
       <h3 class="modal-title">${resp.data.title}</h3>
@@ -78,7 +81,6 @@ function submitForm(event) {
     })
     .catch((err) => {
       alert(err);
-      // Notiflix.Notify.failure('Qui timide rogat docet negare');
       console.log("gg");
     });
 }
