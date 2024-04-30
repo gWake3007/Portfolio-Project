@@ -19,6 +19,7 @@ span.onclick = function () {
 
 document.onclick = function (e) {
   if (e.target === modal) {
+    body.classList.remove("mobMenuOpen");
     modal.style.display = 'none';
   }
 };
@@ -28,6 +29,7 @@ document.addEventListener('keydown', clickEscapeModal);
 function clickEscapeModal(e) {
   if (e.key === 'Escape' || e.key === 'Esc') {
     modal.style.display = 'none';
+    body.classList.remove("mobMenuOpen");
   }
 }
 
@@ -109,6 +111,7 @@ anchors.forEach(anchor => {
       behavior: 'smooth',
       block: 'start',
     });
+    body.classList.remove("mobMenuOpen");
   });
 });
 //* ========================== Scrolling_(END)=====================================
