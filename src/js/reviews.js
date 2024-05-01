@@ -2,7 +2,7 @@ import axios from 'axios';
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 import Swiper from 'swiper';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -15,7 +15,7 @@ const btnNext = document.querySelector('.reviews-next-btn');
 const btnPrev = document.querySelector('.reviews-prev-btn');
 
 const swiper = new Swiper('.reviews-slider', {
-  modules: [Navigation, Keyboard, Mousewheel],
+  modules: [Navigation, Keyboard],
   speed: 1000,
 
   navigation: {
@@ -43,10 +43,6 @@ const swiper = new Swiper('.reviews-slider', {
   keyboard: {
     enabled: true,
     onlyInViewport: true,
-  },
-
-  mousewheel: {
-    invert: false,
   },
 });
 
