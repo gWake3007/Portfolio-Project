@@ -3,46 +3,6 @@ import * as basicLightbox from 'basiclightbox';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-// Робота Кіріл
-
-// const axios = require('axios').default;
-// document.getElementsById("footer").addEventListener("submit", async function (event) {
-//   event.preventDefault();
-
-//   const userEmail = document.querySelector(".footer-input[name='userEmail']").value;
-//   const userComments = document.getElementById("user-comments").value;
-
-//   if (!this.checkValidity()) {
-//     // Вивести повідомлення про помилку
-//     alert("Please fill out all required fields correctly!");
-//     return;
-//   }
-//   try {
-//     const response = await axios.post("https://portfolio-js.b.goit.study/api/requests", formData);
-
-//     if (response.status === 200) {
-//       // Показати модальне вікно з повідомленням про успішну відправку
-//       const successModal = basicLightbox.create("<h1>Success!</h1>");
-//       successModal.show();
-
-//       // Очистити форму
-//       this.reset();
-//     } else {
-
-//       alert("Error: " + response.statusText);
-//     }
-//   } catch (error) {
-//     console.error("Error:", error);
-
-//     // Показати вспливаюче повідомлення про помилку
-//     alert("An error occurred. Please try again later.");
-//   }
-// });
-
-// Робота Кіріл
-
-// body.classList.remove("mobMenuOpen");
-
 const body = document.body;
 const form = document.querySelector('.footer-form');
 
@@ -133,12 +93,3 @@ emailBtn.addEventListener('click', () => {
 phoneBtn.addEventListener('click', () => {
   window.location.href = 'tel:+380111111111';
 });
-
-
-
-
-// const closeButton = instance.element().querySelector('.modal-button');
-// closeButton.addEventListener('click', () => {
-  
-//   instance.close();
-// });
