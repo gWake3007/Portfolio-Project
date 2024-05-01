@@ -123,10 +123,6 @@
 
 @media screen and (min-width: 1440px) {
   .hero {
-    /* background-image: image-set(
-      url(../img/hero/hero_desctop_1x.png) 1x,
-      url(../img/hero/hero_desctop_2x.png) 2x
-    ); */
     background-image: url(../img/hero/hero_desctop_1x.png);
   }
 

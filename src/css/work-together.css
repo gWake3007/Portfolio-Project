@@ -25,21 +25,19 @@ textarea:-webkit-autofill::first-line {
 }
 
 
-
-
-
-
-
-
-
-
 .footer {
-  background-image: url(./img/work_together/1x-min.png);
+  background-image: url(../img/work_together/1x-min.png);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: right;
+  background-size: auto 100%;
 }
 
-
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .footer {
+    background-image: url(../img/work_together/2x-min.png);
+  }
+}
 
 address {
   font-style: normal;
@@ -237,19 +235,6 @@ a {
   transition: 250ms linear;
 }
 
-.container-fot {
-  background-image: url(./img/work_together/1x-min.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right top;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-  .container-fot {
-    background-image: url(./img/work_together/2x-min.png);
-  }
-}
 
 @media screen and (min-width: 768px) {
 
@@ -334,10 +319,6 @@ a {
       }
       
       @media screen and (min-width: 1440px) {
-        .container-fot {
-          background-image: url(./img/work_together/1x-min.png);
-          
-        }
 
         .cont-btn {
           margin-left: 64px;
@@ -347,12 +328,6 @@ a {
           width: 390px;
         }
       
-        @media (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi) {
-          .container-fot {
-            background-image: url(./img/work_together/2x-min.png);
-          }
-        }
       }
       
       /*modal*/
