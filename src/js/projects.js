@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 
 document.addEventListener('DOMContentLoaded', function () {
  const projSwiper = new Swiper('.projects-swiper', {
-   modules: [Navigation, Keyboard, Mousewheel],
+   modules: [Navigation, Keyboard],
    slidesPerView: 1,
    spaceBetween: 20,
    grabCursor: true,
@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
      enabled: true,
      onlyInViewport: true,
    },
-   mousewheel: {
-     invert: false,
-   },
+  //  mousewheel: {
+  //    invert: false,
+  //  },
  });
   const buttonProjPrev = document.querySelector('.proj-left-button');
   const buttonProjNext = document.querySelector('.proj-right-button');
