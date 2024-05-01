@@ -24,7 +24,7 @@
 }
 
 .reviews-list {
- margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .reviews-card {
@@ -53,6 +53,7 @@
   height: 120px;
   overflow-y: auto;
   scrollbar-width: thin;
+  scrollbar-color: #fafafa16 #1c1d20;
   scroll-behavior: smooth;
   color: #fafafa99;
   text-align: left;
@@ -99,7 +100,7 @@
 }
 
 .reviews-prev-btn:hover,
- .reviews-next-btn:hover { 
+.reviews-next-btn:hover {
   border: 1px solid rgba(250, 250, 250, 0.5);
   box-shadow: 0 0 15px #ed3b44;
 }
