@@ -33,7 +33,11 @@ textarea:-webkit-autofill::first-line {
 
 
 
-
+.footer {
+  background-image: url(../img/work_together/desctop_1x.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
 
 
 
@@ -233,7 +237,7 @@ a {
 }
 
 .container-fot {
-  background-image: url(../img/work_together/mobile_1x.png);
+  background-image: url(../img/work_together/desctop_1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
@@ -330,7 +334,7 @@ a {
       
       @media screen and (min-width: 1440px) {
         .container-fot {
-          background-image: url(../img/work_together/desctop_2x.png);
+          background-image: url(../img/work_together/desctop_1x.png);
           
         }
       
