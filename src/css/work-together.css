@@ -26,6 +26,17 @@ textarea:-webkit-autofill::first-line {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 address {
   font-style: normal;
 }
@@ -68,7 +79,7 @@ address {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  display: block;
+  display: inline-block;
 }
 
 .footer-title {
@@ -77,7 +88,10 @@ address {
   line-height: 40px;
   letter-spacing: -0.03em;
   text-align: left;
-  text-transform: uppercase;
+  text-transform: uppercase; 
+  
+  line-height: 1;
+  color: #fafafa;
 }
 
 .title-together {
@@ -297,6 +311,8 @@ a {
         text-align: left;
         text-transform: uppercase;
       }
+
+      
       
       .title-together {
         margin-bottom: 64px;
