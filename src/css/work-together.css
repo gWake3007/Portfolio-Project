@@ -400,7 +400,8 @@ a {
       }
       
       .modal-btn-icon {
-        fill: #fafafa;
+        /* fill: #fafafa; */
+        stroke: #fafafa;
         transition: transform 250ms linear;
       }
       
