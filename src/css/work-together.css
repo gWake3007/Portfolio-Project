@@ -238,10 +238,10 @@ a {
 }
 
 .container-fot {
-  
+  background-image: url(../img/work_together/1x-min.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: right;
+  background-position: right top;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
@@ -257,12 +257,7 @@ a {
     background-position-x: 570px;
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
-    .container-fot {
-      background-image:url(../img/work_together/2x-min.png);
-      }
-      }
+  
       
       .email-btn,
       .phone-btn {
