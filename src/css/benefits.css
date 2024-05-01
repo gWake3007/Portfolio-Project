@@ -120,27 +120,14 @@
   box-sizing: border-box;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
+  transition: 0.5s;
 }
 
-/* @media screen and (min-width: 768px) {
-  .benefits-btn {
-    margin-top: 64px;
-  }
-} */
-
 @media screen and (min-width: 1440px) {
-  .benefits-btn {
-    /* margin-bottom: 64px; */
-    transition: 0.5s;
-    /* position: absolute; */
-  }
   .benefits-btn:hover,
   .benefits-btn:focus {
-    box-shadow: 0 0 15px rgb(212, 187, 187), 1px 2px 4px 0px rgb(212, 187, 187),
-      2px 4px 8px 0px rgb(212, 187, 187), 2px 4px 16px 0px rgb(212, 187, 187);
-    border: none;
-  }
-  .benefits-btn:hover {
-    background-color: rgba(237, 59, 68);
+    border-color: #fafafa;
+    box-shadow: 0 0 15px #ed3b44;
+    cursor: pointer;
   }
 }
