@@ -65,6 +65,7 @@ menu.addEventListener('mouseleave', function (event) {
     !menuList.contains(event.relatedTarget)
   ) {
     menuList.classList.remove('visible-menu');
+    menuList.classList.add('hidden-menu');
   }
 });
 
@@ -74,6 +75,7 @@ menuList.addEventListener('mouseleave', function (event) {
     !menuList.contains(event.relatedTarget)
   ) {
     menuList.classList.remove('visible-menu');
+    menuList.classList.add('hidden-menu');
   }
 });
 
