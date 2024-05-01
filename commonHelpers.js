@@ -9,7 +9,7 @@ import{A as M,S as w,N as E,K as k,M as I,a as b,i as O,b as P}from"./assets/ven
                      <div class="modal-window">
       <button class="modal-button" type="button" aria-label="close-button">
           <svg class="modal-btn-icon" width="22" height="22">
-                  <use href="./img/icons/sprites.svg#closeX"></use>
+                  <use href="/src/img/icons/sprites.svg#closeX"></use>
           </svg>
       </button>
       <div class="modal-all-text">
