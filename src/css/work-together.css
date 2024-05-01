@@ -24,6 +24,46 @@ textarea:-webkit-autofill::first-line {
   margin-top: 32px;
 }
 
+
+
+address {
+  font-style: normal;
+}
+.contacts-footer {
+  margin-top: 64px;
+}
+
+.container-address {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  justify-content: left;
+}
+
+.email-btn,
+.phone-btn {
+    padding: 10px 12px 10px 12px;
+    gap: 10px;
+    border-radius: 60px;
+    border: 1px solid #fafafa33;
+    flex-shrink: 0;
+    transition: border-color 250ms linear, box-shadow 250ms linear;
+  }
+.email-btn:hover,
+.phone-btn:hover {
+  border-color: #fafafa;
+  box-shadow: 0 0 15px #ed3b44;
+}
+
+.contacts-footer-mini {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #fafafa;
+}
 .footer-image {
   width: 44px;
   height: 44px;
@@ -129,6 +169,7 @@ input:-webkit-autofill:active {
   background: rgb(224, 55, 63);
   transition: 250ms linear;
 }
+
 .footer-btn:hover,
 .footer-btn:focus {
   box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
@@ -139,14 +180,25 @@ input:-webkit-autofill:active {
 
 .contacts-wrapper {
   display: flex;
-  gap: 4px;
-  
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  text-align: left;
+  color: #fafafa;
 }
+
+a {
+  text-decoration: none;
+}
+
 .email-btn:hover {
   border-color: #fafafa;
   box-shadow: 0 0 15px #ed3b44;
   cursor: pointer;
 }
+
 .phone-btn:hover {
   border-color: #fafafa;
   box-shadow: 0 0 15px #ed3b44;
@@ -173,7 +225,8 @@ input:-webkit-autofill:active {
   background-position: right;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
   .container-fot {
     background-image: url(../img/work_together/mobile_2x.png);
   }
@@ -184,175 +237,211 @@ input:-webkit-autofill:active {
     background-image: url(../img/work_together/tablet_1x.png);
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
     .container-fot {
-      background-image: url(../img/work_together/tablet_2x.png);
-    }
-  }
-  .email-btn,
-  .phone-btn {
-    padding: 18px 32px 18px 32px;
-  }
-  .contacts-wrapper {
-    gap: 8px;
-  }
-  .footer-btn {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-top: 0px;
-  }
-  .footer-form {
-    flex-direction: row;
-    align-items: center;
-    gap: 32px;
-    margin-bottom: 18px;
-  }
-  .footer-input {
-    width: 100%;
-  }
-  .container-wrapper {
-    margin-top: 80px;
-    gap: 20px;
-  }
-  .section-work-together {
-    padding-bottom: 169px;
-  }
-  .footer-image {
-    width: 70px;
-    height: 70px;
-    border-radius: 24px;
-  }
-  .footer-title,
-  .title-work,
-  .title-together {
-    font-size: 64px;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  .title-together {
-    margin-bottom: 64px;
-    margin-top: 7px;
-  }
-}
-
-@media screen and (max-width: 374px) {
-  .email-btn,
-  .phone-btn {
-    font-size: 10px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .container-fot {
-    background-image: url(../img/work_together/desctop_1x.png);
-  }
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .container-fot {
-      background-image: url(../img/work_together/desctop_2x.png);
-    }
-  }
-}
-
-/*modal*/
-.backdrop {
-  font-family: inherit;
-  position: fixed;
-  z-index: 999999999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0f0f1099;
-}
-.modal-window {
-  position: absolute;
-  z-index: 99999;
-  top: 50%;
-  left: 50%;
-  background-color: #fcfcfc;
-  transform: translate(-50%, -50%);
-  border-radius: 20px;
-  border: 1px solid #fafafa1a;
-  background-color: #1c1d20;
-  width: 343px;
-  min-height: 246px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: transform 250ms linear;
-  pointer-events: auto;
-}
-
-.modal-all-text {
-  padding: 64px 32px 64px 32px;
-}
-.modal-button {
-  display: flex;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 22px;
-  height: 22px;
-  background-color: transparent;
-  border: none;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-.modal-btn-icon {
-  fill: #fafafa;
-  transition: transform 250ms linear;
-}
-.modal-button:hover .modal-btn-icon,
-.modal-button:focus .modal-btn-icon,
-.modal-button:active .modal-btn-icon {
-  transform: scale(1.2);
-}
-.modal-title {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  text-align: center;
-  color: #fafafa;
-  padding-bottom: 8px;
-}
-.modal-text {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  text-align: center;
-  color: #fafafa99;
-}
-
-@media screen and (max-width: 374px) {
-  .modal-window {
-    width: 300px;
-  }
-  .modal-title {
-    font-size: 18px;
-    line-height: 1.2;
-  }
-  .modal-text {
-    font-size: 14px;
-    line-height: 1.2;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .modal-window {
-    width: 493px;
-  }
-  .modal-title {
-    letter-spacing: -0.06em;
-  }
-  .modal-all-text {
-    padding: 64px;
-  }
-}
+      background-image:url(../img/work_together/tablet_2x.png);
+      }
+      }
+      
+      .email-btn,
+      .phone-btn {
+        padding: 18px 32px 18px 32px;
+        font-size: 16px;
+        line-height: 1.2;
+      }
+      
+      .contacts-wrapper {
+        gap: 8px;
+      }
+      
+      .footer-btn {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 0px;
+      }
+      
+      .footer-form {
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 18px;
+      }
+      
+      .footer-input {
+        width: 100%;
+      }
+      
+      .container-wrapper {
+        margin-top: 80px;
+        gap: 20px;
+      }
+      
+      .section-work-together {
+        padding-bottom: 169px;
+      }
+      
+      .footer-image {
+        width: 70px;
+        height: 70px;
+        border-radius: 24px;
+      }
+      
+      .footer-title,
+      .title-work,
+      .title-together {
+        font-size: 64px;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        text-align: left;
+        text-transform: uppercase;
+      }
+      
+      .title-together {
+        margin-bottom: 64px;
+        margin-top: 7px;
+      }
+      }
+      
+      @media screen and (max-width: 374px) {
+      
+        .email-btn,
+        .phone-btn {
+          font-size: 10px;
+        }
+      }
+      
+      @media screen and (min-width: 1440px) {
+        .container-fot {
+          background-image: url(../img/work_together/desctop_2x.png);
+          
+        }
+      
+        @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
+          .container-fot {
+            background-image: url(../img/work_together/desctop_2x.png);
+          }
+        }
+      }
+      
+      /*modal*/
+      .backdrop {
+        font-family: inherit;
+        position: fixed;
+        z-index: 999999999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0f0f1099;
+      }
+      
+      .modal-window {
+        position: absolute;
+        z-index: 99999;
+        top: 50%;
+        left: 50%;
+        background-color: #fcfcfc;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        border: 1px solid #fafafa1a;
+        background-color: #1c1d20;
+        width: 343px;
+        min-height: 246px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+          0px 2px 1px rgba(0, 0, 0, 0.2);
+        transition: transform 250ms linear;
+        pointer-events: auto;
+      }
+      
+      .modal-all-text {
+        padding: 64px 32px 64px 32px;
+      }
+      
+      .modal-button {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 22px;
+        height: 22px;
+        background-color: transparent;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .modal-btn-icon {
+        fill: #fafafa;
+        transition: transform 250ms linear;
+      }
+      
+      .modal-button:hover .modal-btn-icon,
+      .modal-button:focus .modal-btn-icon,
+      .modal-button:active .modal-btn-icon {
+        transform: scale(1.2);
+      }
+      
+      .modal-title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #fafafa;
+        padding-bottom: 8px;
+      }
+      
+      .modal-text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #fafafa99;
+      }
+      
+      @media screen and (max-width: 374px) {
+        .modal-window {
+          width: 300px;
+        }
+      
+        .modal-title {
+          font-size: 18px;
+          line-height: 1.2;
+        }
+      
+        .modal-text {
+          font-size: 14px;
+          line-height: 1.2;
+        }
+      }
+      
+      @media screen and (min-width: 768px) {
+        .modal-window {
+          width: 493px;
+        }
+      
+        .modal-title {
+          letter-spacing: -0.06em;
+        }
+      
+        .modal-all-text {
+          padding: 64px;
+        }
+      
+        .email-btn,
+        .phone-btn {
+          gap: 8px;
+          display: flex;
+          gap: 4px;
+          margin: 0;
+          justify-content: left;
+        }
+      
+        
+      }
