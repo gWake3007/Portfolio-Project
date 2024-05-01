@@ -28,7 +28,7 @@ textarea:-webkit-autofill::first-line {
 .footer {
   background-image: url(../img/work_together/1x-min.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 650% 100%;
   background-size: auto 100%;
 }
 
@@ -39,12 +39,30 @@ textarea:-webkit-autofill::first-line {
   }
 }
 
+@media screen and (max-width: 374px) {
+  .footer {
+    background-position: -4000% 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    background-position: 160% 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    background-position: 105% 100%;
+  }
+}
+
 address {
   font-style: normal;
 }
-.contacts-footer {
+/* .contacts-footer {
   margin-top: 64px;
-}
+} */
 
 .container-address {
   display: flex;
@@ -128,7 +146,6 @@ address {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-bottom: 20px;
   font-family: inherit;
   resize: none;
   color: #fafafa;
@@ -319,6 +336,9 @@ a {
       }
       
       @media screen and (min-width: 1440px) {
+        .container-fot {
+          padding-left: 200px;
+        }
 
         .cont-btn {
           margin-left: 64px;
