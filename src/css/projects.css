@@ -1,5 +1,5 @@
 .projects-section {
-padding-bottom: 64px;
+padding-bottom: 52px;
 
 }
 .proj-swiper-wrapper {
@@ -172,7 +172,7 @@ border-bottom-right-radius: 24px;
 @media screen and (min-width: 768px) {
 
 .projects-section {
-padding-bottom: 96px;
+padding-bottom: 84px;
 
 }
   
@@ -222,7 +222,7 @@ height: 32px;
 
 @media screen and (min-width: 1440px) {
 .projects-section {
-padding-bottom: 164px;
+padding-bottom: 152px;
 
 }
 

@@ -12,7 +12,7 @@
 
 @media screen and (min-width: 1440px) {
   .section-benefits {
-    padding-bottom: 221px;
+    padding-bottom: 164px;
   }
 }
 
@@ -130,8 +130,9 @@
 
 @media screen and (min-width: 1440px) {
   .benefits-btn {
+    /* margin-bottom: 64px; */
     transition: 0.5s;
-    position: absolute;
+    /* position: absolute; */
   }
   .benefits-btn:hover,
   .benefits-btn:focus {
