@@ -135,6 +135,7 @@ address {
   resize: none;
   color: #fafafa;
   transition: border-color 0.25s linear;
+  height: 44px;
 }
 
 .footer-input:hover {
@@ -289,7 +290,7 @@ a {
       }
       
       .footer-input {
-        width: 100%;
+        width: 245px;
       }
       
       .container-wrapper {
@@ -337,6 +338,10 @@ a {
         .container-fot {
           background-image: url(../img/work_together/1x-min.png);
           
+        }
+
+        .footer-input {
+          width: 343px;
         }
       
         @media (-webkit-min-device-pixel-ratio: 2),
