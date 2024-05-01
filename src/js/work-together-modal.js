@@ -3,21 +3,6 @@ import * as basicLightbox from 'basiclightbox';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const svgClose = `<svg
-xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 32 32"
-width="24"
-height="24"
->
-<path
-  stroke="#FAFAFA"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  d="M18 6 6 18M6 6l12 12"
-/>
-</svg>`;
-
 const body = document.body;
 const form = document.querySelector('.footer-form');
 
@@ -38,9 +23,9 @@ function submitForm(event) {
       const instance = basicLightbox.create(` 
       <div id="modalW" class="backdrop visually-hidden">
                      <div class="modal-window">
-      <button class="modal-button" type="button" aria-label="close-button">
+      <button class="modal-button" type="button" aria-label="close-button">X
           <svg class="modal-btn-icon" width="22" height="22">
-                  <use href="${svgClose}"></use>
+                  <use href="./img/icons/sprites.svg#closeX"></use>
           </svg>
       </button>
       <div class="modal-all-text">
