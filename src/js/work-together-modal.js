@@ -23,7 +23,7 @@ function submitForm(event) {
       const instance = basicLightbox.create(` 
       <div id="modalW" class="backdrop visually-hidden">
                      <div class="modal-window">
-      <button class="modal-button" type="button" aria-label="close-button">X
+      <button class="modal-button" type="button" aria-label="close-button">
           <svg class="modal-btn-icon" width="22" height="22">
                   <use href="./img/icons/sprites.svg#closeX"></use>
           </svg>
