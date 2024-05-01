@@ -135,6 +135,7 @@ address {
   resize: none;
   color: #fafafa;
   transition: border-color 0.25s linear;
+  height: 44px;
 }
 
 .footer-input:hover {
@@ -253,6 +254,7 @@ a {
 @media screen and (min-width: 768px) {
   .container-fot {
     background-image: url(../img/work_together/1x-min.png);
+    background-position-x: 570px;
   }
 
   @media (-webkit-min-device-pixel-ratio: 2),
@@ -284,11 +286,11 @@ a {
         flex-direction: row;
         align-items: center;
         gap: 32px;
-        margin-bottom: 18px;
+        margin-bottom: 78px;
       }
       
       .footer-input {
-        width: 100%;
+        width: 245px;
       }
       
       .container-wrapper {
@@ -336,6 +338,10 @@ a {
         .container-fot {
           background-image: url(../img/work_together/1x-min.png);
           
+        }
+
+        .footer-input {
+          width: 343px;
         }
       
         @media (-webkit-min-device-pixel-ratio: 2),
