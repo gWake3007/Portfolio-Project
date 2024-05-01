@@ -257,6 +257,9 @@ a {
     background-position-x: 570px;
   }
 
+    .container-address {
+            gap: 8px;
+      }
   
       
       .email-btn,
@@ -327,12 +330,20 @@ a {
         .phone-btn {
           font-size: 10px;
         }
+
+                .container-address {
+                  gap: 8px;
+                }
       }
       
       @media screen and (min-width: 1440px) {
         .container-fot {
           background-image: url(../img/work_together/1x-min.png);
           
+        }
+
+        .cont-btn {
+          margin-left: 64px;
         }
 
         .footer-input {
