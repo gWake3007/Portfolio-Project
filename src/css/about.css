@@ -127,15 +127,13 @@ ul.accordion-list li.accordion-item .ac-text {
   box-shadow: 0 0 15px #ed3b44;
 }
 
-
-
 .list-item-icon {
   transition: transform 0.5s, box-shadow 700ms linear;
   position: absolute;
 }
 
 .is-active .list-item-icon {
-  transform: rotate(180deg)
+  transform: rotate(180deg);
 }
 
 .about-me-skills-wrapper {
@@ -182,7 +180,6 @@ ul.skills-wrapper li.swiper-slide.skills-slide {
   transition: stroke 250ms linear;
 }
 
-
 div.skills-button-next {
   position: absolute;
   right: 1px;
@@ -200,12 +197,12 @@ div.skills-button-next {
   transition: box-shadow 250ms linear;
 }
 
- div.skills-button-next:hover {
+div.skills-button-next:hover {
   box-shadow: 0 0 15px #ed3b44;
-} 
+}
 
-div.skills-button-next svg:hover { 
-stroke: #fafafa;
+div.skills-button-next svg:hover {
+  stroke: #fafafa;
 }
 
 /* Breaking Point 768px */
@@ -271,7 +268,7 @@ stroke: #fafafa;
   }
 
   .header-box {
-     width: 680px;
+    width: 680px;
     height: 700px;
     padding: 64px 64px 0px 64px;
   }
@@ -316,13 +313,9 @@ stroke: #fafafa;
     width: 200px;
     height: 200px;
   }
-  
-  
+
   div.swiper-button-next.skills-button-next {
     right: 32px;
     top: 50%;
   }
 }
-
-
-

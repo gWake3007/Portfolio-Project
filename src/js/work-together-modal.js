@@ -23,10 +23,8 @@ function submitForm(event) {
       const instance = basicLightbox.create(` 
       <div id="modalW" class="backdrop visually-hidden">
                      <div class="modal-window">
-      <button class="modal-button" type="button" aria-label="close-button">x
-          <svg class="modal-btn-icon" width="22" height="22">
-                  <use href=""></use>
-          </svg>
+      <button class="modal-button" type="button" aria-label="close-button">
+      <svg class="modal-btn-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none"><path stroke="#FAFAFA" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 7 7 21M7 7l14 14"/></svg>
       </button>
       <div class="modal-all-text">
       <h3 class="modal-title">${resp.data.title}</h3>
@@ -92,3 +90,7 @@ emailBtn.addEventListener('click', () => {
 phoneBtn.addEventListener('click', () => {
   window.location.href = 'tel:+380111111111';
 });
+
+// <svg class="modal-btn-icon" width="22" height="22">
+//   <use href="/img/icons/sprites.svg#closeX"></use>
+// </svg>

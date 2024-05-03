@@ -402,9 +402,14 @@ a {
 
       
       .modal-btn-icon {
-        /* fill: #fafafa; */
         stroke: #fafafa;
         transition: transform 250ms linear;
+      }
+
+      .modal-btn-icon path {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       
       .modal-button:hover .modal-btn-icon,
@@ -469,6 +474,4 @@ a {
           margin: 0;
           justify-content: left;
         }
-      
-        
       }

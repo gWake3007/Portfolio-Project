@@ -1,5 +1,4 @@
 import './header-mobileMenu.js';
-import './hero.js';
 import './about.js';
 import './benefits.js';
 import './projects.js';
