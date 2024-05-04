@@ -15,6 +15,7 @@
       </h2>
     </div>
     <form class="footer-form">
+      <label class="laber-for-input">
       <input
         class="footer-input"
         name="userEmail"
@@ -23,7 +24,10 @@
         pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         required
       />
-
+      <span class="email-message-span foot-span"></span>
+    </label>
+      
+<label class="laber-for-input">
       <input
         class="footer-input"
         name="userComments"
@@ -32,6 +36,8 @@
         placeholder="comments"
         required
       />
+      <span class="comments-message-span foot-span"></span>
+    </label>
       <div class="cont-btn">
         <button class="footer-btn" type="submit">Send</button>
       </div>

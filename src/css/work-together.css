@@ -60,9 +60,6 @@ textarea:-webkit-autofill::first-line {
 address {
   font-style: normal;
 }
-/* .contacts-footer {
-  margin-top: 64px;
-} */
 
 .container-address {
   display: flex;
@@ -153,9 +150,15 @@ address {
   height: 44px;
 }
 
-.footer-input:hover {
-  border-color: #fafafa;
+.foot-span {
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 1.1;
 }
+
+/* .footer-input:hover {
+  border-color: #fafafa;
+} */
 
 .footer-input:valid {
   border-color: #3cbc81;

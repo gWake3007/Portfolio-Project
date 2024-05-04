@@ -5,6 +5,17 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const body = document.body;
 const form = document.querySelector('.footer-form');
+const emailText = document.querySelector('.email-message-span');
+const commentsText = document.querySelector('.comments-message-span');
+
+form.addEventListener("input", inputText);
+
+function inputText(event) {
+  const inputEmailText = form.elements.userEmail.value;
+  const inputCommentsText = form.elements.userComments.value;
+  emailText.textContent = inputEmailText;
+  commentsText.textContent = inputCommentsText;
+}
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 
@@ -91,6 +102,3 @@ phoneBtn.addEventListener('click', () => {
   window.location.href = 'tel:+380111111111';
 });
 
-// <svg class="modal-btn-icon" width="22" height="22">
-//   <use href="/img/icons/sprites.svg#closeX"></use>
-// </svg>
