@@ -406,11 +406,6 @@ a {
         transition: transform 250ms linear;
       }
 
-      .modal-btn-icon path {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
       
       .modal-button:hover .modal-btn-icon,
       .modal-button:focus .modal-btn-icon,
